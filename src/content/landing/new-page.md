@@ -7,7 +7,7 @@ bodyVisual: >-
   bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen"><div
   class="max-w-4xl mx-auto text-center"><h1 class="text-5xl font-bold
   text-gray-800 mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text
-  text-transparent">Welcome to WebAcela!</h1><p class="text-xl text-gray-600
+  text-transparent">Welcome to Markulture!</h1><p class="text-xl text-gray-600
   leading-relaxed mb-8 max-w-2xl mx-auto">Start building your amazing page by
   dragging components from the right panel. Create beautiful, responsive layouts
   with our visual editor.</p><div class="grid grid-cols-1 md:grid-cols-3 gap-6

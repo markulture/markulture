@@ -1,12 +1,12 @@
 ---
-title: Welcome to WebAcela
+title: Welcome to Markulture
 description: Experience the future of web development with our innovative solutions
 slug: home
 blocks:
   - type: content
-    title: Why Choose WebAcela?
+    title: Why Choose Markulture?
     content: >
-      WebAcela is a cutting-edge web development platform designed to help
+      Markulture is a cutting-edge web development platform designed to help
       businesses and developers create stunning, high-performance websites
       quickly and efficiently.
 
@@ -16,7 +16,7 @@ blocks:
     backgroundColor: "#ffffff"
     textColor: text-gray-800
   - type: hero
-    title: Build Amazing Websites with WebAcela đồ ngốc
+    title: Build Amazing Websites with Markulture đồ ngốc
     subtitle: The modern web development platform that accelerates your projects
     backgroundImage: /images/hero-bg.png
     ctaText: Get Started
@@ -50,7 +50,7 @@ blocks:
       - name: John Doe
         title: CEO
         company: TechCorp
-        content: WebAcela transformed our online presence completely. The results
+        content: Markulture transformed our online presence completely. The results
           exceeded our expectations!
         rating: 5
       - name: Jane Smith
@@ -67,7 +67,7 @@ blocks:
         rating: 5
   - type: cta
     title: Ready to Get Started?
-    subtitle: Join thousands of satisfied customers who trust WebAcela for their web
+    subtitle: Join thousands of satisfied customers who trust Markulture for their web
       development needs
     buttonText: Contact Us Today
     buttonLink: /contact
