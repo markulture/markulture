@@ -14,6 +14,7 @@
     "cms:production": "bash switch-cms-config.sh production"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
     "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.9.4",
