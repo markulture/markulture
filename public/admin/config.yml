@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-  identity_url: "https://makulture.netlify.app/.netlify/identity"
-  gateway_url: "https://makulture.netlify.app/.netlify/git"
+  identity_url: https://makulture.netlify.app/.netlify/identity
+  gateway_url: https://makulture.netlify.app/.netlify/git
 
   commit_messages:
     create: "Create {{collection}} \"{{slug}}\" [skip netlify]"
