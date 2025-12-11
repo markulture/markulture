@@ -152,177 +152,10 @@
     }
   </style>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    window.CMS_MANUAL_INIT = true;
-  </script>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  
-  <!-- Load js-yaml library for YAML parsing -->
-  <script src="https://unpkg.com/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-  
-  <!-- Include our custom widgets BEFORE CMS.init() -->
-  <script src="./preview.js"></script>
-  <script src="./summernote-enhancement.js"></script>
-  <script src="./grapejs-widget.js"></script>
-  <script src="./link-opener-widget.js"></script>
-  <script src="./google-snippet-widget.js"></script>
-
-  <script>
-    CMS.init({
-      config: {
-        backend: {
-          name: "git-gateway",
-          branch: "main",
-          identity_url: "https://makulture.netlify.app/.netlify/identity",
-          gateway_url: "https://makulture.netlify.app/.netlify/git",
-          commit_messages: {
-            create: "Create {{collection}} \"{{slug}}\" [skip netlify]",
-            update: "Update {{collection}} \"{{slug}}\" [skip netlify]",
-            delete: "Delete {{collection}} \"{{slug}}\" [skip netlify]",
-            uploadMedia: "Upload \"{{path}}\" [skip netlify]",
-            deleteMedia: "Delete \"{{path}}\" [skip netlify]"
-          }
-        },
-        local_backend: true,
-        locale: 'vi',
-        media_folder: "public/images/uploads",
-        public_folder: "/images/uploads",
-        collections: [
-          {
-            name: "blog",
-            label: "Blog",
-            folder: "src/content/blog",
-            create: true,
-            slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
-            summary: "{{title}} - {{date | date('DD/MM/YYYY')}}",
-            sortable_fields: ['date', 'title', 'commit_date'],
-            view_groups: [
-              {
-                label: "Năm",
-                field: "date",
-                pattern: "\\d{4}"
-              },
-              {
-                label: "Thẻ",
-                field: "tags"
-              }
-            ],
-            fields: [
-              { label: "Layout", name: "layout", widget: "hidden", default: "blog" },
-              { label: "Tiêu đề", name: "title", widget: "string" },
-              { label: "Ngày xuất bản", name: "date", widget: "datetime" },
-              { label: "Hình ảnh nổi bật", name: "featuredImage", widget: "image", required: false },
-              { label: "Tóm tắt", name: "excerpt", widget: "text" },
-              { label: "Nội dung", name: "body", widget: "summernote" },
-              { label: "Thẻ", name: "tags", widget: "list", default: ["blog"] }
-            ]
-          },
-          {
-            name: "pages",
-            label: "Trang",
-            editor: {
-              preview: false,
-              frame: true,
-              size: "large"
-            },
-            files: [
-              {
-                label: "Trang Giới Thiệu",
-                name: "about",
-                file: "src/content/pages/about.md",
-                fields: [
-                  { label: "Layout", name: "layout", widget: "hidden", default: "page" },
-                  { label: "Tiêu đề", name: "title", widget: "string" },
-                  { label: "Mô tả", name: "description", widget: "text", required: false },
-                  { label: "Xem trước SEO", name: "seoPreview", widget: "google-snippet-preview", required: false },
-                  { label: "Hành động trang trực tiếp", name: "livePageActions", widget: "live-page-opener", required: false },
-                  {
-                    label: "Nội dung (Trình soạn thảo trực quan)",
-                    name: "bodyVisual",
-                    widget: "grapesjs",
-                    required: false
-                  }
-                ]
-              },
-              {
-                label: "Trang Liên Hệ",
-                name: "contact",
-                file: "src/content/pages/contact.md",
-                fields: [
-                  { label: "Layout", name: "layout", widget: "hidden", default: "page" },
-                  { label: "Tiêu đề", name: "title", widget: "string" },
-                  { label: "Mô tả", name: "description", widget: "text", required: false },
-                  { label: "Xem trước SEO", name: "seoPreview", widget: "google-snippet-preview", required: false },
-                  { label: "Hành động trang trực tiếp", name: "livePageActions", widget: "live-page-opener", required: false },
-                  {
-                    label: "Nội dung (Trình soạn thảo trực quan)",
-                    name: "bodyVisual",
-                    widget: "grapesjs",
-                    required: false
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            name: "landing",
-            label: "Trang Đích",
-            folder: "src/content/landing",
-            create: true,
-            slug: "{{slug}}",
-            editor: {
-              preview: false,
-              frame: true,
-              size: "large"
-            },
-            fields: [
-              { label: "Tiêu đề", name: "title", widget: "string" },
-              { label: "Mô tả", name: "description", widget: "text" },
-              { label: "Đường dẫn", name: "slug", widget: "string" },
-              { label: "Xem trước SEO", name: "seoPreview", widget: "google-snippet-preview", required: false },
-              {
-                label: "Nội dung (Trình soạn thảo trực quan)",
-                name: "bodyVisual",
-                widget: "grapesjs",
-                required: false
-              },
-              { label: "Hành động trang trực tiếp", name: "livePageActions", widget: "live-page-opener", required: false }
-            ]
-          },
-          {
-            name: "settings",
-            label: "Cài Đặt",
-            files: [
-              {
-                label: "Cài Đặt Chung",
-                name: "general",
-                file: "src/content/settings/general.json",
-                editor: {
-                  preview: false
-                },
-                fields: [
-                  {
-                    label: "Trang chủ",
-                    name: "homepage",
-                    widget: "relation",
-                    collection: "landing",
-                    search_fields: ["title", "slug"],
-                    value_field: "slug",
-                    display_fields: ["title"],
-                    required: false,
-                    hint: "Chọn landing page sẽ được hiển thị làm trang chủ"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    });
-  </script>
   
   <!-- Load Vietnamese translation -->
   <script>
@@ -338,5 +171,19 @@
       })
       .catch(error => console.log('Vietnamese locale loading failed:', error));
   </script>
+  
+  <!-- Load js-yaml library for YAML parsing -->
+  <script src="https://unpkg.com/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  
+  <!-- Include our custom preview templates -->
+  <script src="./preview.js"></script>
+  <!-- Include Summernote enhancement -->
+  <script src="./summernote-enhancement.js"></script>
+  <!-- Include GrapesJS widget -->
+  <script src="./grapejs-widget.js"></script>
+  <!-- Include Link Opener widget -->
+  <script src="./link-opener-widget.js"></script>
+  <!-- Include Google Search Snippet Preview widget -->
+  <script src="./google-snippet-widget.js"></script>
 </body>
 </html>
