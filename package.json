@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "astro build && wrangler pages deploy dist",
+    "deploy": "astro build && wrangler pages deploy dist --project-name=markulture",
     "astro": "astro",
     "cms:proxy": "npx decap-server",
     "dev:cms": "npm run cms:proxy & npm run dev",
