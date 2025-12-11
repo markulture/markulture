@@ -5,11 +5,11 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://markulture.pages.dev',
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true
-    }
-  }),
+  site: "https://example.com",
+	adapter: cloudflare({
+		platformProxy: {
+			enabled: true,
+		},
+	}),
   integrations: [tailwind()]
 });
