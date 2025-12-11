@@ -305,7 +305,7 @@
         </div>
         <!-- Item 4 -->
         <div class="flex items-center gap-6 mx-8">
-            <span class="text-7xl lg:text-7xl font-bold text-black whitespace-nowrap">Let's talk social</span>
+            <span class="text-6xl lg:text-7xl font-bold text-black whitespace-nowrap">Let's talk social</span>
             <svg class="w-12 h-12 lg:w-16 lg:h-16 text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="22" y1="2" x2="11" y2="13"></line>
               <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -314,3 +314,402 @@
     </div>
   </div>
 </section>
+
+<!-- Services Section -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 max-w-md leading-tight">
+        Our full-service offering...
+      </h2>
+      
+      <div class="flex items-center gap-4">
+        <!-- Pagination Dots -->
+        <div class="flex gap-2 mr-4" id="services-dots">
+          <button class="w-2 h-2 rounded-full bg-teal-400 transition-colors" data-index="0" aria-label="Slide 1"></button>
+          <button class="w-2 h-2 rounded-full bg-gray-300 transition-colors" data-index="1" aria-label="Slide 2"></button>
+          <button class="w-2 h-2 rounded-full bg-gray-300 transition-colors" data-index="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <a href="#services" class="inline-flex items-center bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-all duration-300 text-sm">
+          View All Services
+        </a>
+        <button id="services-next-btn" class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-all duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Slider Container -->
+    <div class="overflow-hidden" id="services-slider-container">
+      <div class="flex transition-transform duration-500 ease-out" id="services-track">
+        
+        <!-- Card 1: Paid -->
+        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+          <div class="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Paid</h3>
+            </div>
+            
+            <p class="text-gray-600 mb-8 min-h-[3rem]">
+              We deliver performance-driven Paid Social and Paid Search campaigns
+            </p>
+            
+            <ul class="space-y-3 mb-8 flex-grow">
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Paid Social & Paid Search
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Full-Funnel Media Strategy
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Planning, Buying, Creative, Analytics, Testing and more.
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Feed Optimisation & Shopping
+              </li>
+            </ul>
+            
+            <a href="#" class="w-full py-3 rounded-full bg-black text-white text-center font-semibold hover:bg-gray-800 transition-colors">
+              Learn More About Paid
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Creative -->
+        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+          <div class="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                  <line x1="7" y1="2" x2="7" y2="22"></line>
+                  <line x1="17" y1="2" x2="17" y2="22"></line>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <line x1="2" y1="7" x2="7" y2="7"></line>
+                  <line x1="2" y1="17" x2="7" y2="17"></line>
+                  <line x1="17" y1="17" x2="22" y2="17"></line>
+                  <line x1="17" y1="7" x2="22" y2="7"></line>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Creative</h3>
+            </div>
+            
+            <p class="text-gray-600 mb-8 min-h-[3rem]">
+              Delivering outstanding Creative across Video, Design and Motion
+            </p>
+            
+            <ul class="space-y-3 mb-8 flex-grow">
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Organic & Paid Social Video
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                UGC to High-Production
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Creative Strategy, Art Direction & Campaigns
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Motion Design, Animation and Graphics
+              </li>
+            </ul>
+            
+            <a href="#" class="w-full py-3 rounded-full bg-black text-white text-center font-semibold hover:bg-gray-800 transition-colors">
+              Learn More About Creative
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Influencer -->
+        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+          <div class="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Influencer</h3>
+            </div>
+            
+            <p class="text-gray-600 mb-8 min-h-[3rem]">
+              We deliver brand awareness and direct-response Influencer & Creator campaigns
+            </p>
+            
+            <ul class="space-y-3 mb-8 flex-grow">
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                End-to-end Campaign Management
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Brand Awareness and Direct-Response Objectives
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Content Creators for UGC Content
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Wrap Reports and Analysis
+              </li>
+            </ul>
+            
+            <a href="#" class="w-full py-3 rounded-full bg-black text-white text-center font-semibold hover:bg-gray-800 transition-colors">
+              Learn More About Influencer
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Strategy -->
+        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+          <div class="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Strategy</h3>
+            </div>
+            
+            <p class="text-gray-600 mb-8 min-h-[3rem]">
+              Comprehensive digital strategy to guide your brand's growth
+            </p>
+            
+            <ul class="space-y-3 mb-8 flex-grow">
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Brand Positioning & Identity
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Market Research & Analysis
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Content Strategy & Planning
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Go-to-Market Strategy
+              </li>
+            </ul>
+            
+            <a href="#" class="w-full py-3 rounded-full bg-black text-white text-center font-semibold hover:bg-gray-800 transition-colors">
+              Learn More About Strategy
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5: Analytics -->
+        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+          <div class="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Analytics</h3>
+            </div>
+            
+            <p class="text-gray-600 mb-8 min-h-[3rem]">
+              Data-driven insights to optimize performance and ROI
+            </p>
+            
+            <ul class="space-y-3 mb-8 flex-grow">
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Performance Tracking & Reporting
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Conversion Rate Optimization
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                User Behavior Analysis
+              </li>
+              <li class="flex items-start gap-3 text-sm text-gray-700">
+                <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" class="text-teal-400" fill="currentColor"/>
+                  <path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Attribution Modeling
+              </li>
+            </ul>
+            
+            <a href="#" class="w-full py-3 rounded-full bg-black text-white text-center font-semibold hover:bg-gray-800 transition-colors">
+              Learn More About Analytics
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Simple Slider Logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('services-track');
+    const dots = document.querySelectorAll('#services-dots button');
+    const nextBtn = document.getElementById('services-next-btn');
+    
+    if (!track || !dots.length || !nextBtn) return;
+
+    let currentIndex = 0;
+    const totalSlides = dots.length;
+
+    function updateSlider() {
+      // Calculate percentage to translate based on current index
+      // On desktop (lg), we show 3 items, so sliding 1 item means moving 33.33%
+      // On tablet (md), we show 2 items, so sliding 1 item means moving 50%
+      // On mobile, we show 1 item, so sliding 1 item means moving 100%
+      
+      // However, the request implies the dots switch "pages" or "slides".
+      // If we have 3 items total, and 3 dots...
+      // Maybe each dot focuses on one item?
+      
+      // Let's assume we slide one item width at a time.
+      // But we need to know the width of an item relative to the track.
+      // Since we used w-full md:w-1/2 lg:w-1/3, the item width varies.
+      
+      // Let's just use the index to translate by percentage.
+      // If we are on desktop, index 0 shows items 1,2,3. Index 1 shows 2,3, (empty).
+      // This might be weird if we don't have enough items.
+      // But let's implement a standard carousel behavior where we slide by 1 item.
+      
+      // Check screen size to determine how many items are visible
+      const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+      const isTablet = window.matchMedia('(min-width: 768px)').matches;
+      
+      let itemsVisible = 1;
+      if (isDesktop) itemsVisible = 3;
+      else if (isTablet) itemsVisible = 2;
+      
+      // If we have fewer items than visible slots, we can't really slide much on desktop.
+      // But let's allow sliding anyway for demonstration or if more items are added.
+      
+      // Calculate translation percentage
+      // We want to translate by (100 / itemsVisible) * currentIndex percent
+      const percentage = (100 / itemsVisible) * currentIndex;
+      
+      // Limit the slide so we don't show empty space? 
+      // For now, let's just slide.
+      track.style.transform = `translateX(-${percentage}%)`;
+      
+      // Update dots
+      dots.forEach((dot, idx) => {
+        if (idx === currentIndex) {
+          dot.classList.remove('bg-gray-300');
+          dot.classList.add('bg-teal-400');
+        } else {
+          dot.classList.add('bg-gray-300');
+          dot.classList.remove('bg-teal-400');
+        }
+      });
+    }
+
+    // Dot click events
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+      });
+    });
+
+    // Next button click event
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    });
+    
+    // Handle resize to reset or adjust
+    window.addEventListener('resize', updateSlider);
+  });
+</script>
