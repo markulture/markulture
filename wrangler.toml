@@ -1,3 +1,4 @@
 name = "markulture"
 compatibility_date = "2024-12-11"
 pages_build_output_dir = "./dist"
+account_id = "b200560cc55127162a3bbdd78e81f71b"
