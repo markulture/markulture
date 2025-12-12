@@ -2,12 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 import Navigation from '../../components/Navigation.astro';
 import Footer from '../../components/Footer.astro';
+import ServicesSlide from '../../components/slides/servicesSlide.astro';
 ---
 
 <Layout title="Social Media Marketing Services - Markulture" description="Explore our expert social media marketing services designed to boost your brand's online presence and engagement.">
   <Navigation />
   
-  <main class="pt-32">
+  <main class="pt-32 bg-white">
     <section class="py-24 bg-white">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
@@ -147,6 +148,81 @@ import Footer from '../../components/Footer.astro';
             </div>
         </div>
     </section>
+    <ServicesSlide />
+    <!-- Latest Social Content Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                    Checkout our latest <br />
+                    <span class="text-[#5EEAD4]">Social content</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[9/16] mb-4">
+                        <img src="https://placehold.co/400x711" alt="The Dungeons" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-[#4ade80] rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">The Dungeons</h3>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[9/16] mb-4">
+                        <img src="https://placehold.co/400x711" alt="Carpetright" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-[#4ade80] rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Carpetright</h3>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[9/16] mb-4">
+                        <img src="https://placehold.co/400x711" alt="Premier Inn" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-[#4ade80] rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">Premier Inn</h3>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group cursor-pointer">
+                    <div class="relative rounded-3xl overflow-hidden aspect-[9/16] mb-4">
+                        <img src="https://placehold.co/400x711" alt="New Store Opening for Uniqlo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-[#4ade80] rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold">New Store Opening for Uniqlo</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
   </main>
