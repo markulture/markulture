@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Insights - Markulture" description="Latest insights and strategies on Social Media, Paid Media & Video Marketing">
+  <Navigation />
+  
+  <main class="pt-20">
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                <!-- Left Content -->
+                <div class="relative">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 leading-tight tracking-tight">
+                        The weekly newsletter that will keep you up-to-speed <span class="text-[#5EEAD4]">on all things Social</span>
+                    </h1>
+                    
+                    <p class="font-bold text-xl md:text-2xl">This Week In Social</p>
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:pl-12">
+                    <p class="text-xl mb-8 font-medium">What can you expect?</p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4">
+                            <div class="w-8 h-8 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0 border-2 border-black">
+                                <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="text-lg md:text-xl font-medium">Insider Social Platform Updates</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-8 h-8 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0 border-2 border-black">
+                                <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="text-lg md:text-xl font-medium">New Social Algorithm Tweaks</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-8 h-8 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0 border-2 border-black">
+                                <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="text-lg md:text-xl font-medium">Social Strategies That Work</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="pb-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row min-h-[500px]">
+                <!-- Left Image -->
+                <div class="lg:w-1/2 relative min-h-[300px]">
+                    <img src="https://placehold.co/800x600" alt="Markulture Team" class="absolute inset-0 w-full h-full object-cover" />
+                </div>
+                
+                <!-- Right Content -->
+                <div class="lg:w-1/2 bg-[#5EEAD4] p-8 md:p-16 flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                        Join 16,500+ CMO's, Marketing Managers and Social Media enthusiasts who read our newsletter every week.
+                    </h2>
+                    
+                    <form class="flex flex-col sm:flex-row gap-4 max-w-xl">
+                        <div class="relative flex-grow">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 2L11 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <input type="email" placeholder="Work Email Address *" class="w-full pl-12 pr-4 py-4 rounded-full border-none focus:ring-2 focus:ring-black outline-none" required />
+                        </div>
+                        <button type="submit" class="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-colors whitespace-nowrap">
+                            Try It
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Why You'll Love It Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Why you'll love the newsletter</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Relevant -->
+                <div class="bg-black text-white p-8 rounded-[2rem] flex flex-col h-full min-h-[400px]">
+                    <div class="mb-auto">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mb-6">
+                            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Relevant</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Only the latest updates and news, which will keep you informed and up with the current conversation.
+                    </p>
+                </div>
+
+                <!-- Card 2: Insights -->
+                <div class="bg-[#5EEAD4] text-black p-8 rounded-[2rem] flex flex-col h-full min-h-[400px]">
+                    <div class="mb-auto">
+                        <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 60">
+                        <g id="rywbemaekk-label">
+                        <path d="M72,32.4a3.85,3.85,0,0,0-2-3.82c1.37-1.36,2.24-3.08,1.65-4.93a6.31,6.31,0,0,0-2.16-3.18c1.16-1.67,1.76-3.63.76-5.47a4.64,4.64,0,0,0-3.29-2.55c.91-2.82.69-6-2.14-7.29-6.21-2.86-12.42,5.4-15.63,10.12-5.77-1.07-11.35,0-14.27,4.87A12.44,12.44,0,0,0,25,14.86C23,10.11,18.32,4.32,13,4.17S7.37,7.8,8.48,11.48a6.26,6.26,0,0,0-3.19,1.2c-2.43,1.73-2.17,4.48-1.14,6.87-2,.45-3.71,1.54-4,3.7C-.34,26.54,1,28.61,3,30.46c-1.82.8-3,2.29-3,5.08,0,3.05,2.24,4.9,4.8,6.2C2.69,44.18,4.17,46.69,8,49.11c3,1.89,7.29,2.51,11.5,1.65a10.52,10.52,0,0,1,4.72-.13c2.07,1.65,7.72,6.92,9.76,8.82a1.87,1.87,0,0,0,2.08.39,2.06,2.06,0,0,0,.82-.32,64.69,64.69,0,0,0,10.27-8.29l.27-.12c6.18-3.61,14.38-.41,20.28-5.37C70.92,43,70.87,40,68.78,38A8,8,0,0,0,72,32.4ZM11.29,47.54C7.07,45.81,5.58,44,9.71,43.39c2-.56,1.73-3.14,0-3.82C8.51,39.1,7.6,39,6.45,38.39,3.72,37.27,2.61,34.8,5,33.79a18,18,0,0,1,2.54-.23c1.53-.07,2.56-2.63,1.24-4a12.91,12.91,0,0,0-2.93-1.8c-3.15-1-3.65-5.26,1-4.58,1.5.21,3.4-1.32,2.25-2.91-3.45-1.48-3.33-6.18,1.47-4.16a2,2,0,0,0,3.12-2.4c-1.11-2-2.54-6.82,1.59-4.54a14,14,0,0,1,5.48,6,12.71,12.71,0,0,0-9.21,7.61c-2.74,6.72,1.3,14.41,5.11,19.78a19.54,19.54,0,0,0,4.49,5A16.82,16.82,0,0,1,11.29,47.54Zm24.28,8C27.65,48.4,19.7,43.18,15.74,32.73c-2-5.24-1-11.88,5.15-13.39,4.94-1.22,10.89,1.38,12.3,6.09a2,2,0,0,0,3.77.24,2,2,0,0,0,.38-1c.56-6.1,8.57-5.56,13.53-4.29,4.73,1.21,5.06,7,4.7,10.9-.44,4.62-2.59,6.87-5.42,10.46A67.71,67.71,0,0,1,35.57,55.57ZM65,31.34c2.35-.5,3.84,1.61,2.11,3A6.08,6.08,0,0,1,63.48,36c-1.89.37-1.92,3.47,0,3.82,2.44.45,3.26,1.91.71,3.5a16.73,16.73,0,0,1-7.45,2c-1.54.13-3.08.21-4.59.38A56.61,56.61,0,0,0,55.62,41c3.3-5.1,4.65-9.76,3.72-15.71a11.36,11.36,0,0,0-6.27-8.64,41.42,41.42,0,0,1,5.66-6.19c1.15-1,4.27-3.25,4.6-.31a4.54,4.54,0,0,1-2.09,4c-1.79,1.39.53,4.31,2.4,3.1l.79-.5c2.43-1.33,2.92,2.26.29,3.31a5.91,5.91,0,0,0-.85.46c-2.12,1.4-.15,4.81,2,3.41,2.85-1,3.22,2.75-1.4,3.56C62.43,28.1,62.68,31.56,65,31.34Z"></path>
+                        <path d="M43.5,2.79C39.92-.82,33.9-.58,29.64,1.55a1.94,1.94,0,0,0-.59.44c-3.8,1.3-3.14,5.31-1,8,2.63,3.31,8.4,2.9,12,2C44,11,46.74,6.05,43.5,2.79ZM38.56,8.28a13,13,0,0,1-6.65-.13c-.82-.24-2.34-2.23-1.36-2.49A1.85,1.85,0,0,0,31.6,5h0a9.58,9.58,0,0,1,7.26-.52C41.84,5.36,41.05,7.63,38.56,8.28Z"></path>
+                        </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Insights into what's actually working</h3>
+                    <p class="text-gray-800 text-lg leading-relaxed">
+                        Not only do we send industry updates & announcements, but we'll let you in on what's working for our clients today across social content, paid media, video & influencer.
+                    </p>
+                </div>
+
+                <!-- Card 3: Convenience -->
+                <div class="bg-gray-100 text-black p-8 rounded-[2rem] flex flex-col h-full min-h-[400px]">
+                    <div class="mb-auto">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mb-6">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <path d="m22 6-10 7L2 6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Convenience</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Delivered conveniently to your inbox every Tuesday!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+  
+  <Footer />
