@@ -9,7 +9,7 @@ import Footer from "../components/Footer.astro";
   <main class="pt-32 pb-20">
     <div class="container mx-auto px-4">
       <!-- Top Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-24 lg:h-[80vh]">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-24 h-[110vh] lg:h-[80vh]">
         <!-- Left Card (Teal) -->
         <div class="bg-[#5EEAD4] rounded-[2.5rem] flex flex-col justify-center relative">
             <div class="absolute bottom-0 left-0 p-8 md:p-12">
@@ -69,5 +69,225 @@ import Footer from "../components/Footer.astro";
       </div>
     </div>
   </main>
+
+  <!-- Scam Alert Section -->
+  <section class="py-24 bg-white border-t border-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Content -->
+        <div>
+          
+          <h2 class="relative text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                We have been made aware of a scam
+                <span class="absolute left-0 top-0 transform -translate-y-full -translate-x-full md:pr-2">
+                <svg viewBox="0 0 35 33" class="fill-current transition text-black w-4 h-4 | md:w-6 md:h-6">
+                <path d="M.107 19.722a5.088 5.088 0 0 1 1.617-.084c2.663.763 5.34 1.396 7.927 2.372 3.876 1.473 7.713 3.052 11.444 4.837a19.71 19.71 0 0 1 4.204 3.052 1.732 1.732 0 0 1 .374 1.633 1.8 1.8 0 0 1-1.564.64 15.77 15.77 0 0 1-3.754-1.22 691.449 691.449 0 0 1-14.686-7.301c-1.93-1-3.785-2.136-5.669-3.212l.107-.717ZM16.708 0c.539.134 1.053.35 1.526.64 2.052 1.84 4.173 3.632 6.05 5.647 2.823 3.051 5.547 6.172 8.133 9.414a20.022 20.022 0 0 1 2.41 4.623 1.755 1.755 0 0 1-.396 1.633 1.8 1.8 0 0 1-1.686-.114 16.124 16.124 0 0 1-2.853-2.77 725.989 725.989 0 0 1-9.919-13.107c-1.289-1.732-2.449-3.578-3.662-5.34L16.708 0Z"></path>
+                </svg>   
+            </h2>
+          
+          <div class="space-y-6 text-lg text-gray-600">
+            <p class="font-semibold text-black">🚨 Scam Alert: Fake Accounts Impersonating Markulture</p>
+            <p>We've been made aware of fraudulent accounts impersonating our team, offering fake job opportunities and even investment schemes.</p>
+            
+            <div class="bg-gray-50 p-6 rounded-2xl">
+              <p class="font-bold flex items-center gap-2 text-black mb-2">💼 Please note:</p>
+              <ul class="list-disc pl-5 space-y-2">
+                <li>The ONLY place we list open roles is via our official LinkedIn page. Only access it or our website via the links in the website footer.</li>
+                <li>We do not use third-party recruiters, and we'll never ask for your personal or banking details.</li>
+              </ul>
+            </div>
+
+            <p class="flex gap-3">
+              <span class="text-xl">✅</span>
+              <span>If you're ever unsure whether something is real, feel free to DM on Instagram or LinkedIn to speak to us directly. We're here to help.</span>
+            </p>
+
+            <p class="flex gap-3">
+              <span class="text-xl">📢</span>
+              <span>If you spot anything suspicious, please report it immediately and send us a screenshot.</span>
+            </p>
+
+            <p class="font-medium text-black">Thanks for your support ❤️</p>
+          </div>
+        </div>
+
+        <!-- Right Content (Card) -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="bg-white rounded-[2.5rem] p-8 shadow-2xl max-w-md border border-gray-100 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+            <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+              <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center text-3xl">🚨</div>
+              <h3 class="text-4xl font-bold">Scam Alert.</h3>
+            </div>
+            
+            <div class="space-y-4 text-sm text-gray-600 leading-relaxed">
+              <p class="font-semibold text-gray-900">🚨 Scam Alert: Fake Accounts Impersonating Markulture</p>
+              <p>We've been made aware of <span class="bg-[#5EEAD4] px-1 text-black">fraudulent accounts</span> impersonating our team, offering <span class="bg-[#5EEAD4] px-1 text-black">fake job opportunities</span> and even investment schemes.</p>
+              
+              <div class="py-2">
+                <p class="font-bold text-gray-900 mb-1">💼 Please note:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>The ONLY place we list open roles is via our <span class="bg-[#5EEAD4] px-1 text-black">official LinkedIn</span> page. Only access it or our website <span class="bg-[#5EEAD4] px-1 text-black">via the link in our bio</span>.</li>
+                  <li><span class="bg-[#5EEAD4] px-1 text-black">We do not use third-party recruiters</span>, and we'll never ask for your personal or banking details.</li>
+                </ul>
+              </div>
+
+              <p>✅ If you're ever unsure whether something is real, feel free to DM us directly. We're here to help.</p>
+              
+              <p>📢 If you spot anything suspicious, <span class="bg-[#5EEAD4] px-1 text-black">please report it immediately</span> and send us a screenshot.</p>
+              
+              <div class="pt-4 mt-4 border-t border-gray-100">
+                <p class="mb-4">We're actively working to take these impersonators down.<br/>Thanks for your support ❤️</p>
+                <div class="font-bold text-right text-xl text-black">
+                  Markulture_
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Our Values Section -->
+  <section class="py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <!-- Image Column -->
+        <div class="relative">
+          <img 
+            src="/images/uploads/values-meeting.jpg" 
+            alt="Team meeting" 
+            class="w-full h-auto rounded-[2.5rem] object-cover shadow-xl aspect-[4/5] lg:aspect-square"
+            onerror="this.src='https://placehold.co/800x800?text=Our+Values'"
+          />
+        </div>
+
+        <!-- Content Column -->
+        <div>
+          
+          <h2 class="relative text-4xl md:text-5xl font-bold mb-8">
+            Our values
+                <span class="absolute left-0 top-0 transform -translate-y-full -translate-x-full md:pr-2">
+                <svg viewBox="0 0 35 33" class="fill-current transition text-black w-4 h-4 | md:w-6 md:h-6">
+                <path d="M.107 19.722a5.088 5.088 0 0 1 1.617-.084c2.663.763 5.34 1.396 7.927 2.372 3.876 1.473 7.713 3.052 11.444 4.837a19.71 19.71 0 0 1 4.204 3.052 1.732 1.732 0 0 1 .374 1.633 1.8 1.8 0 0 1-1.564.64 15.77 15.77 0 0 1-3.754-1.22 691.449 691.449 0 0 1-14.686-7.301c-1.93-1-3.785-2.136-5.669-3.212l.107-.717ZM16.708 0c.539.134 1.053.35 1.526.64 2.052 1.84 4.173 3.632 6.05 5.647 2.823 3.051 5.547 6.172 8.133 9.414a20.022 20.022 0 0 1 2.41 4.623 1.755 1.755 0 0 1-.396 1.633 1.8 1.8 0 0 1-1.686-.114 16.124 16.124 0 0 1-2.853-2.77 725.989 725.989 0 0 1-9.919-13.107c-1.289-1.732-2.449-3.578-3.662-5.34L16.708 0Z"></path>
+                </svg>  
+            </h2>
+          
+          <div class="prose prose-lg text-gray-600 mb-8">
+            <p>Markulture wouldn't be anywhere without its people. It's what we're built on, and it's what we care about.</p>
+            <p>Since day one, we've focused on nurturing our team and our surroundings, and we'll continue to ensure it stays the most essential part of our future.</p>
+            <p>As a business, we believe in:</p>
+          </div>
+
+          <ul class="space-y-4">
+            <li class="flex items-center gap-4">
+              <div class="w-8 h-8 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-black"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <span class="text-lg font-medium">Leading with kindness</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <div class="w-8 h-8 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-black"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <span class="text-lg font-medium">Build as a team</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <div class="w-8 h-8 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-black"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <span class="text-lg font-medium">Care for your colleagues and clients</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <div class="w-8 h-8 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-black"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <span class="text-lg font-medium">Matching our ambition with yours</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Benefits Section -->
+  <section class="py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Content -->
+        <div>
+            <div class="mb-6">
+                <h2 class="relative text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    Benefits at Markulture
+                    <span class="absolute left-0 top-0 transform -translate-y-full -translate-x-full md:pr-2">
+                    <svg viewBox="0 0 35 33" class="fill-current transition text-black w-4 h-4 | md:w-6 md:h-6">
+                    <path d="M.107 19.722a5.088 5.088 0 0 1 1.617-.084c2.663.763 5.34 1.396 7.927 2.372 3.876 1.473 7.713 3.052 11.444 4.837a19.71 19.71 0 0 1 4.204 3.052 1.732 1.732 0 0 1 .374 1.633 1.8 1.8 0 0 1-1.564.64 15.77 15.77 0 0 1-3.754-1.22 691.449 691.449 0 0 1-14.686-7.301c-1.93-1-3.785-2.136-5.669-3.212l.107-.717ZM16.708 0c.539.134 1.053.35 1.526.64 2.052 1.84 4.173 3.632 6.05 5.647 2.823 3.051 5.547 6.172 8.133 9.414a20.022 20.022 0 0 1 2.41 4.623 1.755 1.755 0 0 1-.396 1.633 1.8 1.8 0 0 1-1.686-.114 16.124 16.124 0 0 1-2.853-2.77 725.989 725.989 0 0 1-9.919-13.107c-1.289-1.732-2.449-3.578-3.662-5.34L16.708 0Z"></path>
+                    </svg>  
+                </h2>
+            </div>
+            
+            <p class="text-lg text-gray-600 mb-8">
+                Packages should stretch further than just a salary, and we've focused on building ours out to ensure we have a comprehensive benefits program for our entire team.
+            </p>
+
+            <p class="text-lg text-gray-600 mb-6">Some of these include:</p>
+
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-medium">Health benefits</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-medium">Perks (discounts, free tickets)</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-medium">Day off on your birthday</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-medium">Bonus twice a year</span>
+                </li>
+                <li class="flex items-center gap-3">
+                    <div class="w-6 h-6 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-medium">Regular team socials</span>
+                </li>
+            </ul>
+
+            <p class="text-gray-600">
+                For country-specific benefits, please see each individual job description.
+            </p>
+        </div>
+
+        <!-- Right Content (Image) -->
+        <div class="relative">
+            <div class="rounded-[2.5rem] overflow-hidden shadow-xl">
+                <img src="https://placehold.co/800x800?text=Office+Life" alt="Office Life" class="w-full h-full object-cover" />
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <Footer />
