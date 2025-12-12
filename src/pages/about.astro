@@ -2,785 +2,188 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
-import QuoteForm from '../components/QuoteForm.astro';
 ---
 
 <Layout 
-  title="About Me - Portfolio" 
-  description="Full-stack Developer với nhiều năm kinh nghiệm trong web development"
+  title="About Us - Markulture" 
+  description="We're an honest bunch that won't pull the wool over your eyes."
 >
   <Navigation />
   
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white py-20 px-4 relative overflow-hidden lg:max-h-[1300px]">
-    <!-- Animated background elements -->
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="bg-element bg-element-1"></div>
-      <div class="bg-element bg-element-2"></div>
-      <div class="bg-element bg-element-3"></div>
-    </div>
-
-    <div class="container mx-auto max-w-7xl relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <!-- Left Content -->
-        <div class="space-y-6 fade-in-up">
-          <!-- Optimizing Badge -->
-          <div class="inline-flex items-center gap-2 bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 py-2">
-            <div class="pulse-dot w-2 h-2 bg-purple-400 rounded-full"></div>
-            <span class="text-sm flex items-center gap-2">
-              <span class="badge-text">Optimizing...</span>
-            </span>
-          </div>
-
-          <!-- Main Heading -->
-          <div>
-            <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-2">
-              Hi, I'm Công Minh
-            </h1>
-            <h2 class="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Full-stack Developer
-            </h2>
-          </div>
-
-          <!-- Terminal Mock -->
-          <div class="terminal-window bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-lg p-4 font-mono text-sm" style="min-height: 174px;">
-            <div class="flex gap-2 mb-3">
-              <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-              <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-              <span class="ml-2 text-slate-400 text-xs">terminal</span>
-            </div>
-            <div class="text-green-400 space-y-1">
-              <div id="typed-lines" class="space-y-1"></div>
-              <div class="typing-text">
-                <span class="typing-content"></span><span class="cursor">|</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Description -->
-          <p class="text-lg text-slate-300 leading-relaxed">
-            Full-stack Developer với 5+ năm kinh nghiệm trong các dự án React, Node.js, Wordpress và Laravel. Devops với AWS và Docker để đảm bảo hiệu suất và độ tin cậy cao cho ứng dụng web.
+  <main class="pt-32 pb-16 px-4 container mx-auto lg:h-screen bg-white">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 h-full">
+      <!-- Left Card (Black) -->
+      <div class="lg:col-span-5 bg-black text-white rounded-[2.5rem] p-8 md:p-12 flex flex-col justify-between min-h-[600px] lg:h-auto relative overflow-hidden">
+        <div class="mt-auto mb-12 relative z-10">
+          <h1 class="text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight mb-8">
+            Be Loud.<br/>
+            Be Herd.<br/>
+            Be Social.
+          </h1>
+          
+          <p class="text-lg md:text-xl leading-relaxed text-gray-300 mb-12 max-w-xl">
+            "We wanted to create an agency that was focussed on results, and by results... we mean ROI. You won't find any 'fluffy' agency chat here. We're an honest bunch that won't pull the wool over your eyes (sorry, we had to!). Since starting the company, we've been very lucky to meet and hire some of the most talented and driven people we've ever met. We're very proud of our team and the work we deliver together."
           </p>
 
-          <!-- CTA Buttons -->
-          <div class="flex flex-wrap gap-4">
-            <a
-              href="#quote-form"
-              class="cta-button bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-full font-medium inline-flex items-center gap-2 transition-all shadow-lg shadow-purple-500/50"
-            >
-              Get in Touch
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-
-            <a
-              href="/resume.pdf"
-              download
-              class="cta-button bg-transparent border-2 border-slate-600 hover:border-purple-500 text-white px-6 py-3 rounded-full font-medium inline-flex items-center gap-2 transition-all"
-            >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Download Resume
-            </a>
-          </div>
-
-          <!-- Social Links -->
-          <div class="flex items-center gap-4 pt-4">
-            <span class="text-slate-400">Follow me on:</span>
-            <a
-              href="https://github.com/minh1997"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-icon text-slate-400 hover:text-white transition-colors"
-            >
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Side - Profile Image -->
-        <div class="relative fade-in-up delay-1">
-          <div class="floating-container">
-            <!-- Decorative rotating elements -->
-            <div class="deco-element deco-element-1 absolute -bottom-4 -left-4 p-3 bg-slate-900/80 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-terminal h-4 w-4"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg>
+          <div class="flex items-center gap-4">
+            <div class="flex -space-x-4">
+              <img src="https://i.pravatar.cc/150?u=zoe" alt="Zoe" class="w-12 h-12 rounded-full border-2 border-black" />
+              <img src="https://i.pravatar.cc/150?u=jack" alt="Jack" class="w-12 h-12 rounded-full border-2 border-black" />
             </div>
-            <div class="deco-element deco-element-2 absolute -bottom-4 -right-4 w-16 h-16 bg-blue-400/30 rounded-full rotate-reverse flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code h-6 w-6"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-            </div>
-            <div class="deco-element deco-element-3 absolute top-10 -right-6 w-12 h-12 bg-purple-400/30 rounded-full float-up-down flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bug h-4 w-4"><path d="m8 2 1.88 1.88"></path><path d="M14.12 3.88 16 2"></path><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"></path><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"></path><path d="M12 20v-9"></path><path d="M6.53 9C4.6 8.8 3 7.1 3 5"></path><path d="M6 13H2"></path><path d="M3 21c0-2.1 1.7-3.9 3.8-4"></path><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"></path><path d="M22 13h-4"></path><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"></path></svg>
-            </div>
-
-            <!-- Profile Image -->
-            <div class="relative w-full max-w-md mx-auto profile-image">
-              <div class="aspect-square rounded-full overflow-hidden border-4 border-purple-500/50 shadow-2xl shadow-purple-500/50">
-                <img
-                  src="/images/profile.jpg"
-                  alt="Profile"
-                  class="w-full h-full object-cover"
-                  onerror="this.src='https://via.placeholder.com/500?text=Profile'"
-                />
-              </div>
-            </div>
-
-            <!-- Floating icons -->
-            <div class="floating-icon floating-icon-1 absolute top-20 -left-8 bg-slate-900/80 backdrop-blur-sm p-3 rounded-full border border-slate-700">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coffee h-4 w-4"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" x2="6" y1="2" y2="4"></line><line x1="10" x2="10" y1="2" y2="4"></line><line x1="14" x2="14" y1="2" y2="4"></line></svg>
+            <div>
+              <p class="font-bold text-white">Zoe & Jack</p>
+              <p class="text-sm text-gray-400">Co-Founders</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Floating Code Button -->
-    <div class="fixed bottom-8 right-8 z-50 scale-in">
-      <button class="code-button bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg shadow-purple-500/50 hover:scale-110 transition-transform">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-      </button>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section class="bg-slate-950 text-white py-20 px-4">
-    <div class="container mx-auto max-w-7xl">
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <!-- Left Column - About Me Card -->
-        <div class="about-card bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
-          <!-- Gradient Header -->
-          <div class="flex items-center gap-4 mb-6">
-            <div class="h-1 flex-1 bg-gradient-to-r from-purple-500 to-transparent"></div>
-            <h2 class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent whitespace-nowrap">
-              About Me
-            </h2>
-            <div class="h-1 flex-1 bg-gradient-to-l from-pink-500 to-transparent"></div>
+      <!-- Right Images Grid -->
+      <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-4 h-[600px] lg:h-full">
+        <!-- Column 1 -->
+        <div class="flex flex-col gap-4">
+          <div class="relative h-[60%] rounded-3xl overflow-hidden group">
+            <img 
+              src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000&auto=format&fit=crop" 
+              alt="Team with sheep" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
           </div>
-
-          <!-- Description -->
-          <div class="space-y-4 text-slate-300 leading-relaxed">
-            <p>
-              Full-stack có chuyên môn trong việc xây dựng các ứng dụng web hiện đại. Với nền tảng vững chắc về cả công nghệ front-end và back-end, tôi tạo ra các giải pháp tối ưu dự án, thân thiện với người dùng, giúp giải quyết các vấn đề tiết kiệm chi phí vận hành dự án.
-            </p>
-          </div>
-
-          <!-- Skills List -->
-          <div class="mt-8">
-            <h3 class="text-lg font-semibold mb-4 text-white">Những gì tôi mang lại:</h3>
-            <div class="space-y-3">
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="text-slate-300">Full-stack development with Laravel and React</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="text-slate-300">DevOps AWS Systems</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="text-slate-300">Database design and optimization</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="text-slate-300">UI/UX design collaboration</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <span class="text-slate-300">API development and integration</span>
-              </div>
-            </div>
+          <div class="relative h-[40%] rounded-3xl overflow-hidden group">
+            <img 
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1000&auto=format&fit=crop" 
+              alt="Presentation" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
           </div>
         </div>
 
-        <!-- Right Column - Stats & Tagline -->
-        <div class="space-y-8">
-          <!-- Tagline -->
-          <div class="tagline-section">
-            <h3 class="text-5xl lg:text-4xl font-bold leading-tight mb-6">
-              Đưa <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Giải pháp</span> vào <span class="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Hiện thực</span>
-            </h3>
-            <p class="text-lg text-slate-300 leading-relaxed mb-8">
-              Giúp các doanh nghiệp ở mọi quy mô thiết lập sự hiện diện online và hợp lý hóa hoạt động của họ.
-            </p>
-
-            <!-- Stats Grid -->
-            <div class="grid grid-cols-2 gap-6">
-            <!-- Stat 1 -->
-            <div class="stat-card bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-              <div class="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                5+
-              </div>
-              <div class="text-sm text-slate-400">Years Experience</div>
-            </div>
-
-            <!-- Stat 2 -->
-            <div class="stat-card bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-              <div class="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                10+
-              </div>
-              <div class="text-sm text-slate-400">Projects Completed</div>
-            </div>
-
-            <!-- Stat 3 -->
-            <div class="stat-card bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-              <div class="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                10+
-              </div>
-              <div class="text-sm text-slate-400">Happy Clients</div>
-            </div>
-
-            <!-- Stat 4 -->
-            <div class="stat-card bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-              <div class="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                8+
-              </div>
-              <div class="text-sm text-slate-400">Technologies</div>
-            </div>
+        <!-- Column 2 -->
+        <div class="flex flex-col gap-4 pt-0">
+          <div class="relative h-[40%] rounded-3xl overflow-hidden group">
+            <img 
+              src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1000&auto=format&fit=crop" 
+              alt="Fun team photo" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
           </div>
+          <div class="relative h-[40%] rounded-3xl overflow-hidden group">
+            <img 
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop" 
+              alt="Office team" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="flex flex-col gap-4 hidden md:flex">
+          <div class="relative h-[30%] rounded-3xl overflow-hidden group">
+            <img 
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop" 
+              alt="Friends" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+          <div class="relative h-[70%] rounded-3xl overflow-hidden group">
+            <img 
+              src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1000&auto=format&fit=crop" 
+              alt="Team event" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </main>
+
+  <section class="py-20 bg-gray-100">
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      
+      <!-- Image Column -->
+      <div class="w-full lg:w-1/2">
+        <div class="relative">
+          <img 
+            src="/images/uploads/team-photo.jpg" 
+            alt="We're made up of specialists, not generalists" 
+            class="w-full h-auto rounded-[2rem] object-cover shadow-xl"
+            onerror="this.src='https://placehold.co/600x600?text=Team+Photo'"
+          />
+        </div>
+      </div>
+      
+      <!-- Content Column -->
+      <div class="w-full lg:w-1/2">
+        <div class="max-w-xl">
+          <h2 class="relative text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+            We're made up of specialists, not generalists
+            <span class="absolute left-0 top-0 transform -translate-y-10/12 -translate-x-9/12  | md:-translate-y-full md:-translate-x-full md:pr-2">
+            <svg viewBox="0 0 35 33" class="fill-current transition text-black w-4 h-4 | md:w-6 md:h-6">
+            <path d="M.107 19.722a5.088 5.088 0 0 1 1.617-.084c2.663.763 5.34 1.396 7.927 2.372 3.876 1.473 7.713 3.052 11.444 4.837a19.71 19.71 0 0 1 4.204 3.052 1.732 1.732 0 0 1 .374 1.633 1.8 1.8 0 0 1-1.564.64 15.77 15.77 0 0 1-3.754-1.22 691.449 691.449 0 0 1-14.686-7.301c-1.93-1-3.785-2.136-5.669-3.212l.107-.717ZM16.708 0c.539.134 1.053.35 1.526.64 2.052 1.84 4.173 3.632 6.05 5.647 2.823 3.051 5.547 6.172 8.133 9.414a20.022 20.022 0 0 1 2.41 4.623 1.755 1.755 0 0 1-.396 1.633 1.8 1.8 0 0 1-1.686-.114 16.124 16.124 0 0 1-2.853-2.77 725.989 725.989 0 0 1-9.919-13.107c-1.289-1.732-2.449-3.578-3.662-5.34L16.708 0Z"></path>
+            </svg>        
+            </span>
+          </h2>
+          
+          <div class="prose prose-lg text-gray-600 mb-10">
+            <p>Digital agencies that offer every service under the sun can struggle to have the expertise that your brand deserves.</p>
+            <br>
+            <p>We decided early on that wasn't going to be us. We've focused on what we're best at and what we love most from day 1.</p>
+            <br>
+            <p>But, we take it one step further. For example, a Social Media Manager isn't someone who manages all organic, paid and influencer activity - but focuses on organic social, strategy and community management. That's why we have specialist teams for all of our services.</p>
+            <br>
+            <p>This allows us to give you the perfect solution by creating a custom-built team for your exact needs and challenges.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      
+      <!-- Content Column (Left) -->
+      <div class="w-full lg:w-1/2 order-2 lg:order-1">
+        <div class="max-w-xl">
+          <h2 class="relative text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+            Focused on outcomes, not outputs
+            <span class="absolute left-0 top-0 transform -translate-y-10/12 -translate-x-9/12  | md:-translate-y-full md:-translate-x-full md:pr-2">
+            <svg viewBox="0 0 35 33" class="fill-current transition text-black w-4 h-4 | md:w-6 md:h-6">
+            <path d="M.107 19.722a5.088 5.088 0 0 1 1.617-.084c2.663.763 5.34 1.396 7.927 2.372 3.876 1.473 7.713 3.052 11.444 4.837a19.71 19.71 0 0 1 4.204 3.052 1.732 1.732 0 0 1 .374 1.633 1.8 1.8 0 0 1-1.564.64 15.77 15.77 0 0 1-3.754-1.22 691.449 691.449 0 0 1-14.686-7.301c-1.93-1-3.785-2.136-5.669-3.212l.107-.717ZM16.708 0c.539.134 1.053.35 1.526.64 2.052 1.84 4.173 3.632 6.05 5.647 2.823 3.051 5.547 6.172 8.133 9.414a20.022 20.022 0 0 1 2.41 4.623 1.755 1.755 0 0 1-.396 1.633 1.8 1.8 0 0 1-1.686-.114 16.124 16.124 0 0 1-2.853-2.77 725.989 725.989 0 0 1-9.919-13.107c-1.289-1.732-2.449-3.578-3.662-5.34L16.708 0Z"></path>
+            </svg>        
+            </span>
+          </h2>
+          
+          <div class="prose prose-lg text-gray-600 mb-8">
+            <p>We care about driving brand and business growth in everything we do.</p>
+            <br>
+            <p>This leads our thinking from the very start to ensure we're delivering work that not only provides growth but future-proofs your brand as the digital industry continues to progress rapidly.</p>
+            <br>
+            <p>If you're looking for a partner just to tick boxes, then we aren't the ones for you.</p>
+            <br>
+            <p>But if you want a partner who'll push you, be innovative, and level up everything you do, then we could be the agency for you.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Column (Right) -->
+      <div class="w-full lg:w-1/2 order-1 lg:order-2">
+        <div class="relative">
+          <img 
+            src="/images/uploads/awards-photo.jpg" 
+            alt="Award winning team" 
+            class="w-full h-auto rounded-[2rem] object-cover shadow-xl"
+            onerror="this.src='https://placehold.co/600x600?text=Focused+on+outcomes,+not+outputs'"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
   
-  <QuoteForm />
   <Footer />
 </Layout>
-
-<script>
-  import { gsap } from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Wait for DOM to be ready
-  document.addEventListener('DOMContentLoaded', () => {
-    // Typing animation texts
-    const typingTexts = [
-      "const developer = 'Nguyen Cong Minh';",
-      "function buildAmazingSystems() {",
-      "  return 'PHP + Javascript';",
-      "}",
-      "// Coffee.exe has stopped working",
-      "git commit -m 'Another day, another bug fixed'",
-      "console.log('Hello, World! 👋');"
-    ];
-
-    let currentTextIndex = 0;
-    const typingContent = document.querySelector('.typing-content');
-    const typedLines = document.getElementById('typed-lines');
-    const badgeText = document.querySelector('.badge-text');
-    
-    function typeText() {
-      if (!typingContent) return;
-      
-      const currentText = typingTexts[currentTextIndex];
-      
-      // Update badge text based on current line
-      if (currentTextIndex >= 0 && currentTextIndex <= 3 && badgeText) {
-        badgeText.textContent = 'Coding...';
-      } else if (currentText === "console.log('Hello, World! 👋');" && badgeText) {
-        badgeText.textContent = 'Testing...';
-      } else if (currentText === "// Coffee.exe has stopped working" && badgeText) {
-        badgeText.textContent = 'Debugging...';
-      } 
-      else if (badgeText) {
-        badgeText.textContent = 'Optimizing...';
-      }
-      
-      // Clear all typed lines when reaching the Coffee.exe line
-      if (currentText === "// Coffee.exe has stopped working" && typedLines) {
-        gsap.to(typedLines.children, {
-          opacity: 0,
-          stagger: 0.02,
-          duration: 0.2,
-          onComplete: () => {
-            typedLines.innerHTML = '';
-          }
-        });
-      }
-      
-      // Clear all typed lines when reaching the console.log line (similar to Coffee.exe)
-      if (currentText === "console.log('Hello, World! 👋');" && typedLines) {
-        gsap.to(typedLines.children, {
-          opacity: 0,
-          stagger: 0.02,
-          duration: 0.2,
-          onComplete: () => {
-            typedLines.innerHTML = '';
-          }
-        });
-      }
-      
-      // Set the full text immediately with HTML for syntax highlighting
-      typingContent.innerHTML = formatCode(currentText);
-      
-      // Animate width to create typing effect
-      gsap.fromTo(typingContent, 
-        { width: 0 },
-        { 
-          width: 'auto',
-          duration: currentText.length * 0.05,
-          ease: 'none',
-          onComplete: () => {
-            // Add the completed line to typed-lines
-            if (typedLines) {
-              const completedLine = document.createElement('div');
-              completedLine.innerHTML = formatCode(currentText);
-              completedLine.style.opacity = '0';
-              typedLines.appendChild(completedLine);
-              
-              // Fade in the completed line
-              gsap.to(completedLine, {
-                opacity: 0.7,
-                duration: 0.3
-              });
-            }
-            
-            // Clear the current typing content
-            typingContent.innerHTML = '';
-            
-            // Move to next text
-            currentTextIndex = (currentTextIndex + 1) % typingTexts.length;
-            
-            // If we've completed all texts, clear and restart after a delay
-            if (currentTextIndex === 0 && typedLines) {
-              gsap.delayedCall(2, () => {
-                gsap.to(typedLines.children, {
-                  opacity: 0,
-                  stagger: 0.05,
-                  duration: 0.3,
-                  onComplete: () => {
-                    typedLines.innerHTML = '';
-                    gsap.delayedCall(0.5, typeText);
-                  }
-                });
-              });
-            } else {
-              // Wait a bit before typing next text
-              gsap.delayedCall(0.3, typeText);
-            }
-          }
-        }
-      );
-    }
-
-    // Helper function to add syntax highlighting
-    function formatCode(text: string) {
-      // Simple syntax highlighting
-      return text
-        .replace(/(const|function|return|git|console)/g, '<span class="text-purple-400">$1</span>')
-        .replace(/('.*?')/g, '<span class="text-yellow-300">$1</span>')
-        .replace(/(\/\/.*$)/g, '<span class="text-gray-500">$1</span>')
-        .replace(/(\{|\}|\(|\))/g, '<span class="text-blue-400">$1</span>');
-    }
-
-    // Start typing animation after initial delay
-    gsap.delayedCall(1, typeText);
-
-    // Hero section fade in animations
-    gsap.from('.fade-in-up', {
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: 'power3.out'
-    });
-
-    // Profile image scale in
-    gsap.from('.profile-image', {
-      opacity: 0,
-      scale: 0.8,
-      duration: 1,
-      delay: 0.3,
-      ease: 'back.out(1.7)'
-    });
-
-    // Pulsing dot
-    gsap.to('.pulse-dot', {
-      scale: 1.3,
-      opacity: 0.5,
-      duration: 1.5,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power2.inOut'
-    });
-
-    // Floating animation for profile container
-    gsap.to('.floating-container', {
-      y: -10,
-      duration: 3,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power1.inOut'
-    });
-
-    // Floating icons
-    gsap.to('.floating-icon-1', {
-      y: -10,
-      duration: 3,
-      delay: 0.5,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power1.inOut'
-    });
-
-    gsap.to('.floating-icon-2', {
-      y: -10,
-      duration: 3,
-      delay: 1,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power1.inOut'
-    });
-
-    // Rotating decorative elements
-    gsap.to('.rotate-element', {
-      rotation: 360,
-      duration: 20,
-      repeat: -1,
-      ease: 'none'
-    });
-
-    gsap.to('.rotate-reverse', {
-      rotation: -360,
-      duration: 15,
-      repeat: -1,
-      ease: 'none'
-    });
-
-    gsap.to('.float-up-down', {
-      y: -20,
-      duration: 4,
-      delay: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power1.inOut'
-    });
-
-    // Background elements pulsing
-    gsap.to('.bg-element-1', {
-      scale: 1.2,
-      opacity: 0.6,
-      duration: 4,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power2.inOut'
-    });
-
-    gsap.to('.bg-element-2', {
-      scale: 1.3,
-      opacity: 0.5,
-      duration: 5,
-      delay: 1,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power2.inOut'
-    });
-
-    gsap.to('.bg-element-3', {
-      scale: 1.4,
-      opacity: 0.7,
-      duration: 6,
-      delay: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: 'power2.inOut'
-    });
-
-    // Code button scale in
-    gsap.from('.code-button', {
-      scale: 0,
-      duration: 0.5,
-      delay: 1,
-      ease: 'back.out(1.7)'
-    });
-
-    // Hover animations for CTA buttons
-    const ctaButtons = document.querySelectorAll('.cta-button');
-    ctaButtons.forEach(button => {
-      button.addEventListener('mouseenter', () => {
-        gsap.to(button, { scale: 1.05, duration: 0.3 });
-      });
-      button.addEventListener('mouseleave', () => {
-        gsap.to(button, { scale: 1, duration: 0.3 });
-      });
-      button.addEventListener('mousedown', () => {
-        gsap.to(button, { scale: 0.95, duration: 0.1 });
-      });
-      button.addEventListener('mouseup', () => {
-        gsap.to(button, { scale: 1.05, duration: 0.1 });
-      });
-    });
-
-    // Social icons hover
-    const socialIcons = document.querySelectorAll('.social-icon');
-    socialIcons.forEach(icon => {
-      icon.addEventListener('mouseenter', () => {
-        gsap.to(icon, { scale: 1.2, rotation: 5, duration: 0.3 });
-      });
-      icon.addEventListener('mouseleave', () => {
-        gsap.to(icon, { scale: 1, rotation: 0, duration: 0.3 });
-      });
-    });
-
-    // Code button hover
-    const codeButton = document.querySelector('.code-button');
-    if (codeButton) {
-      codeButton.addEventListener('mouseenter', () => {
-        gsap.to(codeButton, { scale: 1.1, rotation: 90, duration: 0.3 });
-      });
-      codeButton.addEventListener('mouseleave', () => {
-        gsap.to(codeButton, { scale: 1, rotation: 0, duration: 0.3 });
-      });
-    }
-
-    // Smooth scroll for "Get in Touch" button
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = targetId ? document.querySelector(targetId) : null;
-        
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // About Me section animations
-    gsap.from('.about-card', {
-      scrollTrigger: {
-        trigger: '.about-card',
-        start: 'top 80%',
-      },
-      opacity: 0,
-      x: -50,
-      duration: 0.8,
-      ease: 'power3.out'
-    });
-
-    gsap.from('.tagline-section', {
-      scrollTrigger: {
-        trigger: '.tagline-section',
-        start: 'top 80%',
-      },
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      ease: 'power3.out'
-    });
-  });
-</script>
-
-<style>
-  /* Base styles only - GSAP handles animations */
-  .bg-element {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(40px);
-  }
-
-  .bg-element-1 {
-    top: 5rem;
-    left: 2.5rem;
-    width: 5rem;
-    height: 5rem;
-    background: rgba(168, 85, 247, 0.2);
-  }
-
-  .bg-element-2 {
-    top: 10rem;
-    right: 5rem;
-    width: 8rem;
-    height: 8rem;
-    background: rgba(59, 130, 246, 0.2);
-  }
-
-  .bg-element-3 {
-    bottom: 5rem;
-    left: 25%;
-    width: 6rem;
-    height: 6rem;
-    background: rgba(34, 197, 94, 0.2);
-  }
-
-  .typing-text {
-    display: flex;
-    align-items: center;
-  }
-
-  .typing-content {
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-  }
-
-  .cursor {
-    display: inline-block;
-    width: 1px;
-    height: 1.2em;
-    background-color: transparent;
-    margin-left: 2px;
-    animation: blink 0.75s step-end infinite;
-  }
-
-  @keyframes blink {
-    from, to {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 1024px) {
-    .floating-icon {
-      display: none;
-    }
-
-    .deco-element {
-      width: 3rem !important;
-      height: 3rem !important;
-    }
-  }
-</style>
-
-<style>
-  /* Styles for visual editor content */
-  .visual-content :global(img) {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .visual-content :global(.container) {
-    max-width: 100%;
-  }
-
-  .visual-content :global(.row) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-  }
-
-  .visual-content :global(.col) {
-    flex: 1;
-    padding: 0 15px;
-  }
-
-  .visual-content :global(.col-1) { flex: 0 0 8.333333%; }
-  .visual-content :global(.col-2) { flex: 0 0 16.666667%; }
-  .visual-content :global(.col-3) { flex: 0 0 25%; }
-  .visual-content :global(.col-4) { flex: 0 0 33.333333%; }
-  .visual-content :global(.col-5) { flex: 0 0 41.666667%; }
-  .visual-content :global(.col-6) { flex: 0 0 50%; }
-  .visual-content :global(.col-7) { flex: 0 0 58.333333%; }
-  .visual-content :global(.col-8) { flex: 0 0 66.666667%; }
-  .visual-content :global(.col-9) { flex: 0 0 75%; }
-  .visual-content :global(.col-10) { flex: 0 0 83.333333%; }
-  .visual-content :global(.col-11) { flex: 0 0 91.666667%; }
-  .visual-content :global(.col-12) { flex: 0 0 100%; }
-
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .visual-content :global(.row) {
-      flex-direction: column;
-    }
-
-    .visual-content :global(.col),
-    .visual-content :global([class*="col-"]) {
-      flex: 0 0 100%;
-      margin-bottom: 1rem;
-    }
-  }
-
-  /* Bootstrap-like utilities that GrapesJS might use */
-  .visual-content :global(.text-center) { text-align: center; }
-  .visual-content :global(.text-left) { text-align: left; }
-  .visual-content :global(.text-right) { text-align: right; }
-  .visual-content :global(.text-justify) { text-align: justify; }
-
-  .visual-content :global(.d-block) { display: block; }
-  .visual-content :global(.d-inline) { display: inline; }
-  .visual-content :global(.d-inline-block) { display: inline-block; }
-  .visual-content :global(.d-flex) { display: flex; }
-
-  .visual-content :global(.justify-content-start) { justify-content: flex-start; }
-  .visual-content :global(.justify-content-center) { justify-content: center; }
-  .visual-content :global(.justify-content-end) { justify-content: flex-end; }
-  .visual-content :global(.justify-content-between) { justify-content: space-between; }
-
-  .visual-content :global(.align-items-start) { align-items: flex-start; }
-  .visual-content :global(.align-items-center) { align-items: center; }
-  .visual-content :global(.align-items-end) { align-items: flex-end; }
-
-  .visual-content :global(.btn) {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-bottom: 0;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-
-  .visual-content :global(.btn-primary) {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-
-  .visual-content :global(.btn-primary:hover) {
-    color: #fff;
-    background-color: #0056b3;
-    border-color: #004085;
-  }
-
-  .visual-content :global(.btn-secondary) {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
-  }
-
-  .visual-content :global(.btn-secondary:hover) {
-    color: #fff;
-    background-color: #545b62;
-    border-color: #4e555b;
-  }
-</style>
