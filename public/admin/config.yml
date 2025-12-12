@@ -40,6 +40,8 @@ collections:
       - {label: "Ngày xuất bản", name: "date", widget: "datetime"}
       - {label: "Hình ảnh nổi bật", name: "featuredImage", widget: "image", required: false}
       - {label: "Tóm tắt", name: "excerpt", widget: "text"}
+      - {label: "Xem trước SEO", name: "seoPreview", widget: "google-snippet-preview", required: false}
+      - {label: "Hành động trang trực tiếp", name: "livePageActions", widget: "live-page-opener", required: false}
       - {label: "Nội dung", name: "body", widget: "summernote"}
       - {label: "Thẻ", name: "tags", widget: "list", default: ["blog"]}
 

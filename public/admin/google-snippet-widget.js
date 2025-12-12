@@ -43,7 +43,7 @@
         const title = titleInput ? titleInput.value : '';
 
         // Get description from textarea
-        const descriptionInput = document.querySelector('textarea[id*="description"], textarea[name*="description"], input[type="text"][id*="description"], input[type="text"][name*="description"]');
+        const descriptionInput = document.querySelector('textarea[id*="description"], textarea[name*="description"], input[type="text"][id*="description"], input[type="text"][name*="description"], textarea[id*="excerpt"]');
         const description = descriptionInput ? descriptionInput.value : '';
 
         // Get slug from input field
