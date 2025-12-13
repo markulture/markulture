@@ -88,8 +88,8 @@
     </div>
 
     <!-- Slider -->
-    <div class="overflow-hidden" id="podcast-slider-container">
-      <div class="flex transition-transform duration-500 ease-out gap-6" id="podcast-track">
+    <div class="overflow-hidden" id="podcast-slider-container" style="touch-action: pan-y pinch-zoom;">
+      <div class="flex transition-transform duration-500 ease-out gap-6" id="podcast-track" style="touch-action: pan-y pinch-zoom;">
         
         <!-- Card 1 -->
         <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0">
@@ -251,31 +251,41 @@
     });
     
     // Add touch/swipe support for services slider
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    track.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-    
-    track.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    });
-    
-    function handleSwipe() {
-      const swipeThreshold = 50;
-      const diff = touchStartX - touchEndX;
+    const container = document.getElementById('services-slider-container');
+    if (container) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+      let touchStartTime = 0;
       
-      if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-          // Swipe left - next slide
-          currentIndex = (currentIndex + 1) % totalSlides;
-        } else {
-          // Swipe right - previous slide
-          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      container.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartTime = Date.now();
+      }, { passive: true });
+      
+      container.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        const touchDuration = Date.now() - touchStartTime;
+        
+        // Only trigger if swipe is quick (less than 300ms) and long enough
+        if (touchDuration < 300) {
+          handleSwipe();
         }
-        updateSlider();
+      }, { passive: true });
+      
+      function handleSwipe() {
+        const swipeThreshold = 30;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            // Swipe left - next slide
+            currentIndex = (currentIndex + 1) % totalSlides;
+          } else {
+            // Swipe right - previous slide
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          }
+          updateSlider();
+        }
       }
     }
     
@@ -325,31 +335,41 @@
     });
     
     // Add touch/swipe support for podcast slider
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    track.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-    
-    track.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    });
-    
-    function handleSwipe() {
-      const swipeThreshold = 50;
-      const diff = touchStartX - touchEndX;
+    const container = document.getElementById('podcast-slider-container');
+    if (container) {
+      let touchStartX = 0;
+      let touchEndX = 0;
+      let touchStartTime = 0;
       
-      if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-          // Swipe left - next slide
-          currentIndex = (currentIndex + 1) % totalSlides;
-        } else {
-          // Swipe right - previous slide
-          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      container.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartTime = Date.now();
+      }, { passive: true });
+      
+      container.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        const touchDuration = Date.now() - touchStartTime;
+        
+        // Only trigger if swipe is quick (less than 300ms) and long enough
+        if (touchDuration < 300) {
+          handleSwipe();
         }
-        updateSlider();
+      }, { passive: true });
+      
+      function handleSwipe() {
+        const swipeThreshold = 30;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            // Swipe left - next slide
+            currentIndex = (currentIndex + 1) % totalSlides;
+          } else {
+            // Swipe right - previous slide
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          }
+          updateSlider();
+        }
       }
     }
     

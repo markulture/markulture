@@ -12,5 +12,14 @@ export default defineConfig({
 			enabled: true,
 		},
 	}),
+  server: {
+    port: 4040,
+    host: true
+  },
+  vite: {
+    server: {
+      allowedHosts: ['.ngrok-free.app', '.ngrok.io']
+    }
+  },
   integrations: [tailwind(), mdx()]
 });

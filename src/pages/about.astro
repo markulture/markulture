@@ -244,31 +244,41 @@ const { Content } = await aboutPage.render();
       });
       
       // Add touch/swipe support
-      let touchStartX = 0;
-      let touchEndX = 0;
-      
-      track.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      });
-      
-      track.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-      });
-      
-      function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = touchStartX - touchEndX;
+      const container = document.getElementById('values-slider-container');
+      if (container) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let touchStartTime = 0;
         
-        if (Math.abs(diff) > swipeThreshold) {
-          if (diff > 0) {
-            // Swipe left - next slide
-            currentIndex = (currentIndex + 1) % totalSlides;
-          } else {
-            // Swipe right - previous slide
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        container.addEventListener('touchstart', (e) => {
+          touchStartX = e.touches[0].clientX;
+          touchStartTime = Date.now();
+        }, { passive: true });
+        
+        container.addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].clientX;
+          const touchDuration = Date.now() - touchStartTime;
+          
+          // Only trigger if swipe is quick (less than 300ms) and long enough
+          if (touchDuration < 300) {
+            handleSwipe();
           }
-          updateSlider();
+        }, { passive: true });
+        
+        function handleSwipe() {
+          const swipeThreshold = 30;
+          const diff = touchStartX - touchEndX;
+          
+          if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+              // Swipe left - next slide
+              currentIndex = (currentIndex + 1) % totalSlides;
+            } else {
+              // Swipe right - previous slide
+              currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            }
+            updateSlider();
+          }
         }
       }
       
