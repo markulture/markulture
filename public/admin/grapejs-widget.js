@@ -576,9 +576,6 @@
             canvas: {
               scripts: [
                 'https://cdn.tailwindcss.com'
-              ],
-              styles: [
-                '/src/styles/global.css'
               ]
             },
 
@@ -1566,9 +1563,56 @@
                 doc.head.appendChild(tailwindScript);
               }
             }
+            
+            // Inject custom utility styles into iframe
+            const existingCustomStyles = doc.querySelector('#custom-utilities');
+            if (!existingCustomStyles) {
+              console.log('Injecting custom utility styles into iframe...');
+              
+              const styleElement = doc.createElement('style');
+              styleElement.id = 'custom-utilities';
+              styleElement.textContent = `
+                /* Smooth scroll behavior */
+                html {
+                  scroll-behavior: smooth;
+                }
+
+                /* Responsive width class for slider items */
+                .slider-item-responsive {
+                  width: 100%;
+                }
+
+                @media (min-width: 768px) {
+                  .slider-item-responsive {
+                    width: 50%;
+                  }
+                }
+
+                @media (min-width: 1024px) {
+                  .slider-item-responsive {
+                    width: 33.333333%;
+                  }
+                }
+
+                /* Center horizontally utility */
+                .center-x {
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+
+                /* Apply Be Vietnam Pro globally */
+                body, body * {
+                  font-family: 'Be Vietnam Pro', sans-serif !important;
+                }
+              `;
+              
+              if (doc.head) {
+                doc.head.appendChild(styleElement);
+              }
+            }
           }
         } catch (error) {
-          console.error('Error injecting Tailwind CSS script:', error);
+          console.error('Error injecting styles into iframe:', error);
         }
       }, 1000);
     },
