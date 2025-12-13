@@ -474,8 +474,8 @@
               },
             },
             
-            // Load all plugins including Style Background, Custom Code, and Countdown
-            plugins: [basicPluginName, tuiPluginName, formsPluginName, presetPluginName, styleBgPluginName, customCodePluginName, countdownPluginName],
+            // Load all plugins EXCEPT forms plugin which breaks button SVG content
+            plugins: [basicPluginName, tuiPluginName, presetPluginName, styleBgPluginName, customCodePluginName, countdownPluginName],
             
             // Plugin options
             pluginOpts: {
@@ -499,10 +499,6 @@
                 onApply: (imageEditor, imageModel) => {
                   console.log('Image edited:', imageModel);
                 }
-              },
-              [formsPluginName]: {
-                blocks: ['form', 'input', 'textarea', 'select', 'button', 'label', 'checkbox', 'radio'],
-                category: 'Biểu mẫu'
               },
               [presetPluginName]: {
                 blocks: ['link-block', 'quote', 'text-basic'],
@@ -607,17 +603,58 @@
           
           console.log('GrapesJS editor with plugins initialized successfully');
           
-          // Prevent GrapeJS from removing SVG content from buttons
-          this.editor.DomComponents.addType('button', {
-            extend: 'default',
-            model: {
-              defaults: {
-                textable: false,  // Disable text editing mode to preserve SVG content
-                editable: false,  // Prevent content replacement
-              }
-            }
-          });
-          console.log('✅ Button component configured to preserve SVG content');
+          // Add custom form blocks manually (without forms plugin that breaks buttons)
+          // const blockManager = this.editor.BlockManager;
+          
+          // blockManager.add('form', {
+          //   label: 'Biểu mẫu',
+          //   category: 'Biểu mẫu',
+          //   content: '<form class="p-4"><input type="text" placeholder="Nhập tên" class="border p-2 mb-2 w-full"/><button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Gửi</button></form>'
+          // });
+          
+          // blockManager.add('input', {
+          //   label: 'Nhập liệu',
+          //   category: 'Biểu mẫu',
+          //   content: '<input type="text" placeholder="Nhập văn bản" class="border p-2"/>'
+          // });
+          
+          // blockManager.add('textarea', {
+          //   label: 'Văn bản lớn',
+          //   category: 'Biểu mẫu',
+          //   content: '<textarea placeholder="Nhập văn bản..." class="border p-2 w-full h-32"></textarea>'
+          // });
+          
+          // blockManager.add('select', {
+          //   label: 'Chọn',
+          //   category: 'Biểu mẫu',
+          //   content: '<select class="border p-2"><option>Tùy chọn 1</option><option>Tùy chọn 2</option></select>'
+          // });
+          
+          // blockManager.add('button', {
+          //   label: 'Nút',
+          //   category: 'Biểu mẫu',
+          //   content: '<button class="bg-blue-500 text-white px-4 py-2 rounded">Nhấn vào đây</button>'
+          // });
+          
+          // blockManager.add('label', {
+          //   label: 'Nhãn',
+          //   category: 'Biểu mẫu',
+          //   content: '<label class="block mb-2">Nhãn:</label>'
+          // });
+          
+          // blockManager.add('checkbox', {
+          //   label: 'Hộp kiểm',
+          //   category: 'Biểu mẫu',
+          //   content: '<label class="flex items-center"><input type="checkbox" class="mr-2"/>Hộp kiểm</label>'
+          // });
+          
+          // blockManager.add('radio', {
+          //   label: 'Nút radio',
+          //   category: 'Biểu mẫu',
+          //   content: '<label class="flex items-center"><input type="radio" name="radio" class="mr-2"/>Tùy chọn</label>'
+          // });
+          
+          // console.log('✅ Custom form blocks added without forms plugin');
           
           // Helper function to fix Tailwind arbitrary value classes
           this.fixTailwindClasses = (classes) => {
