@@ -7,7 +7,7 @@ bodyVisual: >-
   overflow-hidden"><div class="container mx-auto px-4 py-20"><div class="grid
   lg:grid-cols-12 gap-12 items-center"><!-- Left Content --><div
   class="space-y-8 md:col-span-8"><div class="space-y-2"><p class="text-sm
-  font-medium tracking-wide">Social test</p><h1 class="text-6xl lg:text-7xl
+  font-medium tracking-wide">Social test Hi</p><h1 class="text-6xl lg:text-7xl
   font-bold leading-tight">
                   The results-driven 
                   <span class="text-teal-400">Social first agency</span> 
