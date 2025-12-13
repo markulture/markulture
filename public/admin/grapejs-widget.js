@@ -257,6 +257,9 @@
             noticeOnUnload: false,
             storageManager: false,
             
+            // Prevent GrapeJS from converting classes to inline styles
+            avoidInlineStyle: true,
+            
             // i18n configuration for Vietnamese
             i18n: {
               locale: 'vi',
@@ -603,6 +606,216 @@
           });
           
           console.log('GrapesJS editor with plugins initialized successfully');
+          
+          // Helper function to fix Tailwind arbitrary value classes
+          this.fixTailwindClasses = (classes) => {
+            if (!classes) return classes;
+            
+            let fixed = classes;
+            // Fix: rounded--2-5rem- -> rounded-[2.5rem] (decimal with unit)
+            fixed = fixed.replace(/(\w+)--(\d+)-(\d+)(\w+)-/g, '$1-[$2.$3$4]');
+            // Fix: w--100px- -> w-[100px] (integer with unit)
+            fixed = fixed.replace(/(\w+)--(\d+)([a-z%]+)-/gi, '$1-[$2$3]');
+            // Fix: h--60- -> h-[60%] (just number, likely percentage)
+            fixed = fixed.replace(/(\w+)--(\d+)-(?![a-z0-9])/gi, '$1-[$2%]');
+            // Fix: text--ff0000- -> text-[#ff0000] (hex colors)
+            fixed = fixed.replace(/(\w+)--([a-fA-F0-9]{6})-/g, '$1-[#$2]');
+            // Fix: text--fff- -> text-[#fff] (short hex colors)
+            fixed = fixed.replace(/(\w+)--([a-fA-F0-9]{3})-(?![a-fA-F0-9])/g, '$1-[#$2]');
+            
+            return fixed;
+          };
+          
+          // Fix Tailwind arbitrary values in all components
+          const fixComponentClasses = (component) => {
+            if (!component) return;
+            
+            const type = component.get('type');
+            console.log('🔍 Component type:', type);
+            
+            // Check if this is or contains custom-code
+            const isCustomCode = type === 'custom-code';
+            const dataType = component.getAttributes()['data-gjs-type'];
+            
+            if (isCustomCode || dataType === 'custom-code') {
+              console.log('✨ Custom code component detected!');
+            }
+            
+            setTimeout(() => {
+              // Try different ways to access the content
+              const content = component.get('content') || '';
+              const components = component.get('components');
+              const attributes = component.getAttributes();
+              let needsRefresh = false;
+              
+              // Fix classes in the component's attributes
+              if (attributes && attributes.class) {
+                const fixedClasses = this.fixTailwindClasses(attributes.class);
+                if (fixedClasses !== attributes.class) {
+                  component.addAttributes({ class: fixedClasses });
+                  console.log('✅ Fixed Tailwind classes in component attributes:', attributes.class, '→', fixedClasses);
+                  needsRefresh = true;
+                }
+              }
+              
+              // Fix classes in content (for custom-code components)
+              if (content && content.includes('class=')) {
+                const fixed = content.replace(/class="([^"]*)"/g, (match, classes) => {
+                  const fixedClasses = this.fixTailwindClasses(classes);
+                  if (fixedClasses !== classes) {
+                    console.log('✅ Fixed Tailwind classes in content:', classes, '→', fixedClasses);
+                  }
+                  return `class="${fixedClasses}"`;
+                });
+                
+                if (fixed !== content) {
+                  component.set('content', fixed);
+                  console.log('✅ Updated custom-code content');
+                  needsRefresh = true;
+                }
+              }
+              
+              // Also fix classes in child components
+              if (components && components.length > 0) {
+                components.forEach(child => {
+                  fixComponentClasses(child); // Recursively fix children
+                });
+              }
+              
+              // Force canvas refresh to show the fixed classes
+              if (needsRefresh) {
+                setTimeout(() => {
+                  // Re-render the component in canvas
+                  component.view?.render();
+                  
+                  // Also fix the classes in the canvas iframe DOM
+                  const iframe = this.editor.Canvas.getFrameEl();
+                  if (iframe && iframe.contentDocument) {
+                    const doc = iframe.contentDocument;
+                    const componentEl = component.getEl();
+                    
+                    if (componentEl) {
+                      // Find all elements with broken Tailwind classes in the iframe
+                      const allElements = componentEl.querySelectorAll('[class*="--"]');
+                      allElements.forEach(el => {
+                        const classes = el.getAttribute('class');
+                        if (classes) {
+                          const fixedClasses = this.fixTailwindClasses(classes);
+                          if (fixedClasses !== classes) {
+                            el.setAttribute('class', fixedClasses);
+                            console.log('✅ Fixed canvas element classes:', classes, '→', fixedClasses);
+                          }
+                        }
+                      });
+                      
+                      // Also fix the component element itself
+                      const compClasses = componentEl.getAttribute('class');
+                      if (compClasses && compClasses.includes('--')) {
+                        const fixedCompClasses = this.fixTailwindClasses(compClasses);
+                        if (fixedCompClasses !== compClasses) {
+                          componentEl.setAttribute('class', fixedCompClasses);
+                          console.log('✅ Fixed canvas component classes:', compClasses, '→', fixedCompClasses);
+                        }
+                      }
+                    }
+                  }
+                  
+                  console.log('🔄 Canvas refreshed with fixed classes');
+                }, 200);
+              }
+            }, 100);
+          };
+          
+          // Listen for component add and update events
+          this.editor.on('component:add', fixComponentClasses);
+          this.editor.on('component:update', (component) => {
+            // Only fix on update if it's a custom-code component or has class changes
+            const type = component.get('type');
+            if (type === 'custom-code' || component.changed?.attributes?.class) {
+              fixComponentClasses(component);
+            }
+          });
+          
+          // Fix all existing components when editor loads
+          this.editor.on('load', () => {
+            console.log('🔧 Fixing all existing Tailwind classes on load...');
+            
+            const fixAllComponents = (component) => {
+              const attributes = component.getAttributes();
+              
+              // Fix classes in component attributes
+              if (attributes && attributes.class && attributes.class.includes('--')) {
+                const fixedClasses = this.fixTailwindClasses(attributes.class);
+                if (fixedClasses !== attributes.class) {
+                  component.addAttributes({ class: fixedClasses });
+                  console.log('✅ Fixed existing component:', attributes.class, '→', fixedClasses);
+                }
+              }
+              
+              // Fix content for custom-code components
+              const content = component.get('content') || '';
+              if (content && content.includes('class=') && content.includes('--')) {
+                const fixed = content.replace(/class="([^"]*)"/g, (match, classes) => {
+                  const fixedClasses = this.fixTailwindClasses(classes);
+                  return `class="${fixedClasses}"`;
+                });
+                
+                if (fixed !== content) {
+                  component.set('content', fixed);
+                  console.log('✅ Fixed existing custom-code content');
+                }
+              }
+              
+              // Recursively fix all children
+              const children = component.get('components');
+              if (children && children.length > 0) {
+                children.forEach(child => fixAllComponents(child));
+              }
+            };
+            
+            // Fix all components in the wrapper
+            const wrapper = this.editor.DomComponents.getWrapper();
+            if (wrapper) {
+              fixAllComponents(wrapper);
+            }
+            
+            // Also fix directly in the canvas iframe
+            setTimeout(() => {
+              const iframe = this.editor.Canvas.getFrameEl();
+              if (iframe && iframe.contentDocument) {
+                const doc = iframe.contentDocument;
+                const allElements = doc.querySelectorAll('[class*="--"]');
+                
+                allElements.forEach(el => {
+                  const classes = el.getAttribute('class');
+                  if (classes && classes.includes('--')) {
+                    const fixedClasses = this.fixTailwindClasses(classes);
+                    if (fixedClasses !== classes) {
+                      el.setAttribute('class', fixedClasses);
+                      console.log('✅ Fixed canvas element on load:', classes, '→', fixedClasses);
+                    }
+                  }
+                });
+                
+                console.log('✅ All existing classes fixed in canvas');
+              }
+            }, 500);
+          });
+          
+          // Override getHtml to fix Tailwind classes in output
+          const originalGetHtml = this.editor.getHtml.bind(this.editor);
+          const fixTailwindClasses = this.fixTailwindClasses;
+          this.editor.getHtml = function(opts) {
+            let html = originalGetHtml(opts);
+            
+            // Fix broken Tailwind arbitrary values
+            html = html.replace(/class="([^"]*)"/g, (match, classes) => {
+              const fixedClasses = fixTailwindClasses(classes);
+              return `class="${fixedClasses}"`;
+            });
+            
+            return html;
+          };
           
           // Override basic plugin blocks with Tailwind classes
           this.overrideBasicBlocks();

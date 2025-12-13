@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import { getEntry } from 'astro:content';
+
+const aboutPage = await getEntry('pages', 'about');
+const { Content } = await aboutPage.render();
 ---
 
 <Layout 
@@ -9,6 +13,11 @@ import Footer from '../components/Footer.astro';
   description="We're an honest bunch that won't pull the wool over your eyes."
 >
   <Navigation />
+
+  <!-- Markdown Content Section -->
+  {aboutPage && aboutPage.data.bodyVisual && (
+    <Fragment set:html={aboutPage.data.bodyVisual} />
+  )}
   
   <main class="pt-32 pb-16 px-4 container mx-auto lg:h-screen bg-white">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 h-full">
