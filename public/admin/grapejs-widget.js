@@ -607,6 +607,18 @@
           
           console.log('GrapesJS editor with plugins initialized successfully');
           
+          // Prevent GrapeJS from removing SVG content from buttons
+          this.editor.DomComponents.addType('button', {
+            extend: 'default',
+            model: {
+              defaults: {
+                textable: false,  // Disable text editing mode to preserve SVG content
+                editable: false,  // Prevent content replacement
+              }
+            }
+          });
+          console.log('✅ Button component configured to preserve SVG content');
+          
           // Helper function to fix Tailwind arbitrary value classes
           this.fixTailwindClasses = (classes) => {
             if (!classes) return classes;
