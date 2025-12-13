@@ -4,10 +4,28 @@ import HeroContent from '../components/HeroContent.astro';
 import QuoteForm from '../components/QuoteForm.astro';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const homePage = await getEntry('pages', 'home');
 ---
 
-<Layout>
+<Layout 
+  title={homePage?.data.title || "Markulture"}
+  description={homePage?.data.description || "Digital Marketing Agency"}
+>
 	<Navigation />
+	
+	<!-- Visual Content from CMS -->
+	{homePage && homePage.data.bodyVisual && (
+		<div class="bg-white" set:html={homePage.data.bodyVisual} />
+	)}
+	
+	<!-- Default Content if no CMS content -->
+	{(!homePage || !homePage.data.bodyVisual) && (
+		<HeroContent />
+	)}
+
 	<HeroContent />
+	
 	<Footer />
 </Layout>

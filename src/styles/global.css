@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,4 +48,15 @@ html {
   .slider-item-responsive {
     width: 33.333333%;
   }
+}
+
+/* Center horizontally utility */
+.center-x {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Override inline font-family from CMS content */
+body, body * {
+  font-family: 'Be Vietnam Pro', sans-serif !important;
 }

@@ -52,6 +52,19 @@ collections:
       frame: true     # Enable frame mode for better layout control
       size: large     # Make the editor container larger
     files:
+      - label: "Trang Chủ"
+        name: "home"
+        file: "src/content/pages/home.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Mô tả", name: "description", widget: "text", required: false}
+          - {label: "Xem trước SEO", name: "seoPreview", widget: "google-snippet-preview", required: false}
+          - {label: "Hành động trang trực tiếp", name: "livePageActions", widget: "live-page-opener", required: false}
+          - label: "Nội dung (Trình soạn thảo trực quan)"
+            name: "bodyVisual"
+            widget: "grapesjs"
+            required: false
       - label: "Trang Giới Thiệu"
         name: "about"
         file: "src/content/pages/about.md"

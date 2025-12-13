@@ -576,6 +576,9 @@
             canvas: {
               scripts: [
                 'https://cdn.tailwindcss.com'
+              ],
+              styles: [
+                '/src/styles/global.css'
               ]
             },
 
