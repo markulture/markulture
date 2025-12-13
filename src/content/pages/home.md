@@ -15,7 +15,7 @@ bodyVisual: >-
                 </h1></div><div class="flex flex-wrap gap-4"><a href="/services" class="inline-flex items-center bg-black hover:bg-gray-900 text-white px-8 py-4 rounded-full transition-all duration-200 text-base font-medium group">
                   Browse Our Services
                   <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
-                    </path></svg></a><a href="#team" class="inline-flex items-center text-black hover:text-gray-700 font-medium transition-colors">
+                    </path></svg></a><a href="/about" class="inline-flex items-center text-black hover:text-gray-700 font-medium transition-colors">
                   Meet The Team →
                 </a></div></div><!-- Right Content - Phone Mockup --><div class="relative flex justify-center lg:justify-end md:col-span-4"><!-- Decorative elements --><div class="absolute top-0 right-20 w-20 h-20"><svg viewBox="0 0 100 100" fill="currentColor" class="text-teal-400"><path d="M20,10 L30,30 L10,30 Z M40,20 L50,40 L30,40 Z">
                   </path></svg></div><!-- Phone Mockup --><div class="relative z-10 w-80 lg:w-96"><div class="relative bg-black rounded-[3rem] p-3 shadow-2xl"><!-- Phone notch --><div class="absolute top-0 center-x w-40 h-7 bg-black rounded-b-3xl z-20">
