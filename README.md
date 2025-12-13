@@ -30,7 +30,7 @@ All commands are run from the root of the project, from a terminal:
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4040`      |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run dev:cms`         | Start Decap CMS Proxy Server                     | 
@@ -47,7 +47,7 @@ This project uses **Decap CMS** (formerly Netlify CMS) for content management.
    ```
 
 2. **Access Decap CMS:**
-   - Navigate to `http://localhost:4040/admin/`
+   - Navigate to `http://localhost:4321/admin/`
    - The local configuration (`public/admin/config.local.yml`) uses `backend: local`
    - No authentication required for local development
 
