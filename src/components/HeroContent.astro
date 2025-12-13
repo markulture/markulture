@@ -67,6 +67,8 @@
 </section>
 -->
 
+
+
 <!-- Podcast Section -->
 <section class="py-20 bg-white overflow-hidden">
   <div class="container mx-auto px-4">
@@ -250,6 +252,35 @@
       updateSlider();
     });
     
+    // Add touch/swipe support for services slider
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+    
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe left - next slide
+          currentIndex = (currentIndex + 1) % totalSlides;
+        } else {
+          // Swipe right - previous slide
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        }
+        updateSlider();
+      }
+    }
+    
     window.addEventListener('resize', updateSlider);
   }
 
@@ -291,6 +322,35 @@
         updateSlider();
       });
     });
+    
+    // Add touch/swipe support for podcast slider
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+    
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe left - next slide
+          currentIndex = (currentIndex + 1) % totalSlides;
+        } else {
+          // Swipe right - previous slide
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        }
+        updateSlider();
+      }
+    }
     
     window.addEventListener('resize', updateSlider);
   }

@@ -19,11 +19,6 @@ const homePage = await getEntry('pages', 'home');
 	{homePage && homePage.data.bodyVisual && (
 		<div class="bg-white" set:html={homePage.data.bodyVisual} />
 	)}
-	
-	<!-- Default Content if no CMS content -->
-	{(!homePage || !homePage.data.bodyVisual) && (
-		<HeroContent />
-	)}
 
 	<HeroContent />
 	
