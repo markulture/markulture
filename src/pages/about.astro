@@ -279,8 +279,10 @@ const { Content } = await aboutPage.render();
     }
 
     // Initialize on load
-    initValuesSlider();
-    initTeamModal();
+    document.addEventListener('DOMContentLoaded', () => {
+      initValuesSlider();
+      initTeamModal();
+    });
     
     // Re-initialize on view transitions if using Astro View Transitions
     document.addEventListener('astro:page-load', () => {

@@ -67,8 +67,6 @@
 </section>
 -->
 
-
-
 <!-- Podcast Section -->
 <section class="py-20 bg-white overflow-hidden">
   <div class="container mx-auto px-4">
@@ -282,6 +280,9 @@
     }
     
     window.addEventListener('resize', updateSlider);
+    
+    // Initial update
+    updateSlider();
   }
 
   // Podcast Slider Logic
@@ -353,6 +354,9 @@
     }
     
     window.addEventListener('resize', updateSlider);
+    
+    // Initial update
+    updateSlider();
   }
 
   document.addEventListener('DOMContentLoaded', () => {
