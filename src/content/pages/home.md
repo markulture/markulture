@@ -70,7 +70,7 @@ bodyVisual: >-
                   Content Creators for UGC Content
                 </li><li class="flex items-start gap-3 text-sm text-gray-700"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0"><circle cx="12" cy="12" r="10" fill="currentColor" class="text-teal-400"></circle><path d="M8 12L11 15L16 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                   Wrap Reports and Analysis
-                </li></ul><a href="/services/Influencer" class="w-full py-3 rounded-full bg-black text-white text-center font-semibold hover:bg-gray-800 transition-colors">
+                </li></ul><a href="/services/influencer" class="w-full py-3 rounded-full bg-black text-white text-center font-semibold hover:bg-gray-800 transition-colors">
                 Learn More About Influencer
               </a></div></div><!-- Card 4: Strategy --><div class="w-full slider-item-responsive flex-shrink-0 px-4"><div class="bg-white rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full"><div class="flex items-center gap-4 mb-6"><div class="w-12 h-12 bg-black rounded-xl flex items-center justify-center text-white"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div><h3 class="text-2xl font-bold text-gray-900">Strategy</h3></div><p class="text-gray-600 mb-8 min-h-[3rem]">
                 Comprehensive digital strategy to guide your brand's growth
