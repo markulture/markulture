@@ -56,6 +56,10 @@ html {
   transform: translateX(-50%);
 }
 
+.-leading-tight {
+  line-height: 1.2 !important;
+}
+
 /* Override inline font-family from CMS content */
 body, body * {
   font-family: 'Be Vietnam Pro', sans-serif !important;

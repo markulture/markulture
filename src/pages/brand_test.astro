@@ -15,13 +15,13 @@ import Footer from "../components/Footer.astro";
           class="w-full h-full object-cover object-center"
         />
         <!-- Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4), transparent);"></div>
       </div>
 
       <!-- Content -->
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-3xl pt-20">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white !leading-tight mb-6">
             Bạn Có Đang Điều Hành<br />
             Thương Hiệu <span class="text-[#C5A572]">Trong Vùng Mù?</span>
           </h1>
@@ -30,7 +30,7 @@ import Footer from "../components/Footer.astro";
             90 phút phát hiện 3–7 'điểm mù' đang âm thầm kéo brand của bạn xuống 20–200% trong 12 tháng tới.
           </p>
           
-          <a href="#" class="inline-flex items-center gap-3 bg-[#E8E8E8] text-black px-8 py-3 rounded-full font-bold text-lg hover:bg-white transition-colors group shadow-lg">
+          <a href="/contact" class="inline-flex items-center gap-3 bg-[#E8E8E8] text-black px-8 py-3 rounded-full font-bold text-lg hover:bg-white transition-colors group shadow-lg">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
               <path d="M5 12h14"></path>
               <path d="M12 5l7 7-7 7"></path>
@@ -86,7 +86,7 @@ import Footer from "../components/Footer.astro";
 
           <!-- CTA Button -->
           <div class="flex flex-col items-center justify-center">
-            <a href="#" class="group relative inline-flex items-center gap-4 bg-gradient-to-b from-[#E8E8E8] to-[#D4D4D4] text-black pl-6 pr-10 py-4 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.2)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] transition-all duration-300 transform hover:-translate-y-1 border border-white/50">
+            <a href="/contact" class="group relative inline-flex items-center gap-4 bg-gradient-to-b from-[#E8E8E8] to-[#D4D4D4] text-black pl-6 pr-10 py-4 rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.2)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] transition-all duration-300 transform hover:-translate-y-1 border border-white/50">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
                 <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
               </svg>
@@ -173,7 +173,7 @@ import Footer from "../components/Footer.astro";
         <hr class="border-gray-800 mb-12" />
 
         <div class="text-center">
-          <a href="#" class="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition-colors group">
+          <a href="/contact" class="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition-colors group">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
               <path d="M5 12h14"></path>
               <path d="M12 5l7 7-7 7"></path>
@@ -222,7 +222,7 @@ import Footer from "../components/Footer.astro";
 
         <!-- CTA -->
         <div class="text-center">
-          <a href="#" class="inline-flex items-center gap-3 bg-[#E8E8E8] text-black px-8 py-3 rounded-full font-bold text-lg hover:bg-white transition-colors group mb-4">
+          <a href="/contact" class="inline-flex items-center gap-3 bg-[#E8E8E8] text-black px-8 py-3 rounded-full font-bold text-lg hover:bg-white transition-colors group mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
               <path d="M5 12h14"></path>
               <path d="M12 5l7 7-7 7"></path>
@@ -419,6 +419,176 @@ import Footer from "../components/Footer.astro";
             <p class="text-gray-300 text-sm leading-relaxed">
               Mình thấy quy trình khám rất dễ hiểu, mình đã nắm chiến lược xây brand từ gốc rễ, xây dựng hệ thống nội dung rất sát để thu hút khách hàng mục tiêu. Biết một lần dùng cả đời!
             </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Preview Section -->
+    <section class="py-20 bg-[#F5F5F5]">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-black mb-16">
+          Preview buổi khám
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
+          
+          <!-- Card 1 -->
+          <div class="flex flex-col">
+            <!-- Thumbnail -->
+            <div class="relative aspect-video bg-[#E5E4E0] flex items-center justify-center p-8 text-center group cursor-pointer">
+               <h3 class="text-2xl font-serif text-gray-800">BRAND MARKETING<br>IS MAKING CHANGES!</h3>
+               <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 bg-black/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <!-- Black Box Title -->
+            <div class="bg-black text-white p-6 rounded-xl -mt-6 relative z-10  shadow-lg min-h-[100px] flex items-center">
+              <h4 class="font-bold text-lg leading-tight">
+                Brand Marketing 2025: Cách giúp khách hàng <span class="text-[#C5A572]">chạm đích nhanh hơn!</span>
+              </h4>
+            </div>
+            <!-- Description -->
+            <p class="px-4 mt-4 text-gray-700 text-sm">
+              Giải pháp giúp khách hàng chạm tay vào thành công mà họ mong đợi!
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="flex flex-col">
+             <!-- Thumbnail -->
+            <div class="relative aspect-video bg-[#E5E4E0] flex items-center justify-center p-8 text-center group cursor-pointer">
+               <h3 class="text-2xl font-serif text-gray-800">Làm thế nào để khách hàng<br>nhận ra thương hiệu của bạn?</h3>
+               <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 bg-black/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <!-- Black Box Title -->
+            <div class="bg-black text-white p-6 rounded-xl -mt-6 relative z-10  shadow-lg min-h-[100px] flex items-center">
+              <h4 class="font-bold text-lg leading-tight">
+                Cách thiết kế identity <span class="text-[#C5A572]">đồng bộ trên cả 5 giác quan</span>
+              </h4>
+            </div>
+            <!-- Description -->
+            <p class="px-4 mt-4 text-gray-700 text-sm">
+              Biến thương hiệu của bạn thành dấu ấn không phai trong tâm trí khách hàng!
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flex flex-col">
+             <!-- Thumbnail -->
+            <div class="relative aspect-video bg-[#E5E4E0] flex items-center justify-center p-8 text-center group cursor-pointer">
+               <h3 class="text-2xl font-serif text-gray-800">83% doanh nghiệp F&B thất bại<br>vì bỏ quên điều này!</h3>
+               <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 bg-black/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <!-- Black Box Title -->
+            <div class="bg-black text-white p-6 rounded-xl -mt-6 relative z-10  shadow-lg min-h-[100px] flex items-center">
+              <h4 class="font-bold text-lg leading-tight">
+                Khám phá cách thiết kế thương hiệu chạm tới <span class="text-[#C5A572]">mọi giác quan khách hàng!</span>
+              </h4>
+            </div>
+            <!-- Description -->
+            <p class="px-4 mt-4 text-gray-700 text-sm">
+              Xây dựng văn hóa doanh nghiệp giúp bạn đứng vững trước mọi đối thủ!
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="flex flex-col">
+             <!-- Thumbnail -->
+            <div class="relative aspect-video bg-[#E5E4E0] flex items-center justify-center p-8 text-center group cursor-pointer">
+               <h3 class="text-2xl font-serif text-gray-800">Sai lầm nguy hiểm<br>của doanh nghiệp bán lẻ!</h3>
+               <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 bg-black/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+            <!-- Black Box Title -->
+            <div class="bg-black text-white p-6 rounded-xl -mt-6 relative z-10  shadow-lg min-h-[100px] flex items-center">
+              <h4 class="font-bold text-lg leading-tight">
+                Lỗi sai khiến doanh nghiệp bán lẻ <span class="text-[#C5A572]">mất khách – Bạn có mắc phải?</span>
+              </h4>
+            </div>
+            <!-- Description -->
+            <p class="px-4 mt-4 text-gray-700 text-sm">
+              Khách hàng sẽ rời xa bạn nếu bỏ qua điều quan trọng này – Đừng để điều đó xảy ra!
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-[#F5F5F5]">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-black mb-16">
+          Bạn còn thắc mắc gì không?
+        </h2>
+
+        <div class="space-y-6">
+          
+          <!-- FAQ Item 1 -->
+          <div class="border border-[#C5A572] rounded-lg overflow-hidden">
+            <div class="bg-[#C5A572] p-4 flex justify-between items-center">
+              <h3 class="font-bold text-black text-lg">Khám Brand khác gì workshop?</h3>
+              <span class="text-black font-bold text-xl">–</span>
+            </div>
+            <div class="bg-[#F5F5F5] p-6">
+              <p class="text-gray-800 leading-relaxed">
+                Giống một workshop cá nhân 1:1 dành riêng cho bạn trong 90 phút. Bạn sẽ mang về bản báo cáo cá nhân hóa Brand Radar Chart. Đây là la bàn giúp bạn nhìn rõ chiến lược 5-10 năm.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="border border-[#C5A572] rounded-lg overflow-hidden">
+            <div class="bg-[#C5A572] p-4 flex justify-between items-center">
+              <h3 class="font-bold text-black text-lg">Nếu tôi không nhận được insight mới thì sao?</h3>
+              <span class="text-black font-bold text-xl">–</span>
+            </div>
+            <div class="bg-[#F5F5F5] p-6">
+              <p class="text-gray-800 leading-relaxed">
+                Chắc chắn bạn sẽ nhận được insight mới và chiến lược khắc phục điểm mù ngay sau 90 phút.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="border border-[#C5A572] rounded-lg overflow-hidden">
+            <div class="bg-[#C5A572] p-4 flex justify-between items-center">
+              <h3 class="font-bold text-black text-lg">Có thể đổi lịch không?</h3>
+              <span class="text-black font-bold text-xl">–</span>
+            </div>
+            <div class="bg-[#F5F5F5] p-6">
+              <p class="text-gray-800 leading-relaxed">
+                Manager sẽ giúp bạn đổi lịch tối đa 2 lần (với lý do chính đáng)
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="border border-[#C5A572] rounded-lg overflow-hidden">
+            <div class="bg-[#C5A572] p-4 flex justify-between items-center">
+              <h3 class="font-bold text-black text-lg">Sau buổi khám tôi có được hỗ trợ tiếp không?</h3>
+              <span class="text-black font-bold text-xl">–</span>
+            </div>
+            <div class="bg-[#F5F5F5] p-6">
+              <p class="text-gray-800 leading-relaxed">
+                Bạn có thể thoải mái hỏi đáp trong zalo chat trong 12 tháng tiếp theo.
+              </p>
+            </div>
           </div>
 
         </div>
