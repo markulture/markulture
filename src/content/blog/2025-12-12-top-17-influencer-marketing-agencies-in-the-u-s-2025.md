@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Top 17 Influencer Marketing Agencies in the U.S. (2025)
+title: Top 17 Influencer Marketing Agencies in the U.S. (2026)
 date: 2025-12-12T13:04:00.000+07:00
 featuredImage: /images/uploads/top-17-influencer-marketing-agencies-in-the-u.s.-2024.webp
 excerpt: >-
