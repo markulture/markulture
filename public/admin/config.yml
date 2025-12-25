@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   repo: markulture/markulture
   branch: main
-  identity_url: https://auth.decapbridge.com/sites/6a922800-f8dd-4462-be4a-724d8e7e3159
+  identity_url: https://auth.decapbridge.com/sites/6a922800-f8dd-4462-be4a-724d8e7e3159/
   gateway_url: https://gateway.decapbridge.com
   # See who did what (optional)
   commit_messages:
