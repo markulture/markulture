@@ -3,7 +3,7 @@ layout: blog
 title: "Google Zero: Vì sao lượt truy cập website giảm dù vẫn làm SEO? Cách xử
   lý cho doanh nghiệp SMEs trước 2026"
 date: 2025-12-14T16:21:00.000+07:00
-featuredImage: /images/uploads/unnamed.png
+featuredImage: /images/uploads/google-zero.png
 excerpt: Google tóm tắt câu trả lời bằng AI ngay trên trang tìm kiếm khiến người
   dùng không bấm vào website. Bài viết giải thích Google Zero dễ hiểu và hướng
   dẫn 3 việc làm trong 7 ngày để website tạo khách thật cho
