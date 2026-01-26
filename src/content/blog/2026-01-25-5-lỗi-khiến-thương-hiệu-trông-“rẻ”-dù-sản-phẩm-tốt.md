@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: 5 lỗi khiến thương hiệu trông “rẻ” dù sản phẩm tốt
+title: 5 lỗi khiến thương hiệu trông rẻ dù sản phẩm tốt
 date: 2026-01-25T15:47:00.000+07:00
 featuredImage: /images/uploads/unnamed.png
 excerpt: Vì sao thương hiệu trông “rẻ” dù sản phẩm tốt? Phân tích nguyên nhân từ
