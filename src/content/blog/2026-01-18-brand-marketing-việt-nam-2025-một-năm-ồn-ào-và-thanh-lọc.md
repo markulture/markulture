@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: "Brand & Marketing Việt Nam 2025: Một năm ồn ào và thanh lọc"
+slug: brand-marketing-viet-nam-2025-mot-nam-on-ao-va-thanh-loc
 date: 2026-01-18T21:09:00.000+07:00
 excerpt: Nhìn lại 2025, không chỉ để nhớ xem chuyện gì đã xảy ra mà để hiểu vì
   sao nó xảy ra và điều gì sẽ còn lại cho 2026.

@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: 'Audit phễu cho SME: Nhìn ra điểm tắc "real" trong bán hàng'
+slug: audit-pheu-cho-sme-nhin-ra-diem-tac-real-trong-ban-hang
 date: 2026-01-04T20:34:00.000+07:00
 featuredImage: /images/uploads/audit-pheu.png
 excerpt: Audit phễu 60 phút cho SME giúp xác định điểm tắc trong bán hàng, audit

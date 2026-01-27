@@ -39,6 +39,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Tiêu đề", name: "title", widget: "string"}
+      - {label: "Đường dẫn (Slug)", name: "slug", widget: "string", hint: "URL thân thiện cho bài viết. Ví dụ: giai-phap-website-jamstack"}
       - {label: "Ngày xuất bản", name: "date", widget: "datetime"}
       - {label: "Hình ảnh nổi bật", name: "featuredImage", widget: "image", required: false}
       - {label: "Tóm tắt", name: "excerpt", widget: "text"}

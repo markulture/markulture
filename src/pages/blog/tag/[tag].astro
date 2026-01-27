@@ -79,7 +79,7 @@ const categories = [
         <div class="lg:col-span-8">
           {featuredPost ? (
             <article class="group cursor-pointer h-full flex flex-col">
-              <a href={`/blog/${featuredPost.slug}`} class="relative aspect-[4/3] md:aspect-[16/10] overflow-hidden rounded-3xl mb-6 bg-[#5EEAD4] block">
+              <a href={`/blog/${featuredPost.data.slug || featuredPost.slug}`} class="relative aspect-[4/3] md:aspect-[16/10] overflow-hidden rounded-3xl mb-6 bg-[#5EEAD4] block">
                 {featuredPost.data.featuredImage ? (
                   <img 
                     src={featuredPost.data.featuredImage} 
@@ -100,7 +100,7 @@ const categories = [
                 </div>
                 
                 <h2 class="text-3xl md:text-4xl font-bold text-black group-hover:text-gray-700 transition-colors mb-3">
-                  <a href={`/blog/${featuredPost.slug}`}>
+                  <a href={`/blog/${featuredPost.data.slug || featuredPost.slug}`}>
                     {featuredPost.data.title}
                   </a>
                 </h2>
@@ -145,7 +145,7 @@ const categories = [
           <div class="space-y-8">
             {sidebarPosts.map(post => (
               <article class="group cursor-pointer">
-                <a href={`/blog/${post.slug}`} class="relative aspect-[16/10] overflow-hidden rounded-2xl mb-4 bg-[#5EEAD4] block">
+                <a href={`/blog/${post.data.slug || post.slug}`} class="relative aspect-[16/10] overflow-hidden rounded-2xl mb-4 bg-[#5EEAD4] block">
                   {post.data.featuredImage ? (
                     <img 
                       src={post.data.featuredImage} 
@@ -161,7 +161,7 @@ const categories = [
                 
                 <div>
                   <h3 class="text-xl font-bold text-black group-hover:text-gray-700 transition-colors mb-2 leading-tight">
-                    <a href={`/blog/${post.slug}`}>
+                    <a href={`/blog/${post.data.slug || post.slug}`}>
                       {post.data.title}
                     </a>
                   </h3>
@@ -185,7 +185,7 @@ const categories = [
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {morePosts.map(post => (
               <article class="group cursor-pointer">
-                <a href={`/blog/${post.slug}`} class="relative aspect-[16/10] overflow-hidden rounded-2xl mb-4 bg-gray-100 block">
+                <a href={`/blog/${post.data.slug || post.slug}`} class="relative aspect-[16/10] overflow-hidden rounded-2xl mb-4 bg-gray-100 block">
                   {post.data.featuredImage && (
                     <img 
                       src={post.data.featuredImage} 
@@ -195,7 +195,7 @@ const categories = [
                   )}
                 </a>
                 <h3 class="text-xl font-bold text-black group-hover:text-gray-700 transition-colors mb-2">
-                  <a href={`/blog/${post.slug}`}>
+                  <a href={`/blog/${post.data.slug || post.slug}`}>
                     {post.data.title}
                   </a>
                 </h3>
