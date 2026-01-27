@@ -28,6 +28,7 @@ collections:
     folder: "src/content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: "slug" # Use slug as unique identifier
     summary: "{{title}} - {{date | date('DD/MM/YYYY')}}" # Customize list view
     sortable_fields: ['date', 'title', 'commit_date']
     view_groups:
@@ -39,7 +40,11 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Tiêu đề", name: "title", widget: "string"}
-      - {label: "Đường dẫn (Slug)", name: "slug", widget: "string", hint: "URL thân thiện cho bài viết. Ví dụ: giai-phap-website-jamstack"}
+      - label: "Đường dẫn (Slug)"
+        name: "slug"
+        widget: "string"
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', "Slug chỉ chứa chữ thường, số và dấu gạch ngang. Ví dụ: bai-viet-moi"]
+        hint: "URL thân thiện và DUY NHẤT cho bài viết. Chỉ dùng chữ thường không dấu, số và dấu gạch ngang (-). Ví dụ: giai-phap-website-jamstack"
       - {label: "Ngày xuất bản", name: "date", widget: "datetime"}
       - {label: "Hình ảnh nổi bật", name: "featuredImage", widget: "image", required: false}
       - {label: "Tóm tắt", name: "excerpt", widget: "text"}
