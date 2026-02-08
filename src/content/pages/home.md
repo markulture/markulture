@@ -96,5 +96,5 @@ bodyVisual: >-
                   Attribution Modeling
                 </li></ul><a href="#" class="w-full py-3 rounded-full bg-black text-white text-center font-semibold hover:bg-gray-800 transition-colors">
                 Learn More About Analytics
-              </a></div></div></div></div></div></section></div></div></div></div></body><style>* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}</style>
+              </a></div></div></div></div></div></section></div></div></div></div></body><style>* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}@media (max-width: 480px){.text-6xl.lg\:text-7xl.font-bold.leading-tight{font-size:30px;}}</style>
 ---
