@@ -592,7 +592,7 @@
               },
               {
                 name: 'Điện thoại',
-                width: '320px',
+                width: '375px',
                 widthMedia: '480px',
               }]
             },
