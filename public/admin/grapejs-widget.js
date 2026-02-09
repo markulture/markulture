@@ -475,7 +475,27 @@
             },
             
             // Load all plugins EXCEPT forms plugin which breaks button SVG content
-            plugins: [basicPluginName, tuiPluginName, presetPluginName, styleBgPluginName, customCodePluginName, countdownPluginName],
+            plugins: [
+              // Inline plugin: register heading/paragraph types as editable text BEFORE content is parsed
+              (editor) => {
+                const dc = editor.DomComponents;
+                const editableTags = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'LI', 'BLOCKQUOTE', 'CITE', 'FIGCAPTION', 'CAPTION', 'DT', 'DD'];
+                editableTags.forEach(tag => {
+                  dc.addType(tag.toLowerCase(), {
+                    extend: 'text',
+                    isComponent: el => el && el.tagName === tag,
+                    model: {
+                      defaults: {
+                        tagName: tag.toLowerCase(),
+                        editable: true,
+                      },
+                    },
+                  });
+                });
+                console.log('✅ Heading, paragraph and inline tags registered as editable text types');
+              },
+              basicPluginName, tuiPluginName, presetPluginName, styleBgPluginName, customCodePluginName, countdownPluginName
+            ],
             
             // Plugin options
             pluginOpts: {
@@ -1192,7 +1212,7 @@
           
           // Fix device commands to work with existing toolbar
           this.fixDeviceCommands();
-          
+
         } catch (pluginError) {
           // Fallback: Initialize without plugins
           this.editor = window.grapesjs.init({
