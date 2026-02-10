@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Markulture - the agency marketing
-description: Digital Marketing Agency
+title: Markulture - The Agency Marketing
+description: Markulture đồng hành cùng doanh nghiệp xây dựng chiến lược
+  marketing, tối ưu hiệu suất và tạo tăng trưởng thực bằng tư duy dữ liệu & sáng
+  tạo.
 bodyVisual: >-
   <body><section class="relative bg-white min-h-screen flex items-center
   overflow-hidden"><div class="container mx-auto px-4 py-20"><div class="grid
