@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: Giải Pháp Website JAMstack - Mua Một Lần, Dùng Trọn Đời
 slug: giai-phap-website-jamstack-mua-mot-lan-dung-tron-doi
 date: 2025-12-11T23:16:00.000+07:00

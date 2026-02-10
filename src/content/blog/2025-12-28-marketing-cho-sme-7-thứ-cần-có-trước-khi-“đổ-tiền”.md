@@ -1,5 +1,4 @@
 ---
-layout: blog
 slug: marketing-cho-sme-7-thu-can-co-truoc-khi-do-tien
 title: "Marketing cho SME: 7 thứ cần có trước khi “đổ tiền”"
 date: 2025-12-28T18:15:00.000+07:00

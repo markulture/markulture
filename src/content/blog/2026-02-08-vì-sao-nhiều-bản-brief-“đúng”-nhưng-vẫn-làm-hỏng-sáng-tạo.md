@@ -1,6 +1,6 @@
 ---
-layout: blog
 title: Vì sao nhiều bản brief “đúng” nhưng vẫn làm hỏng sáng tạo?
+slug: vi-sao-nhieu-ban-brief-dung-nhung-van-lam-hong-sang-tao
 date: 2026-02-08T12:41:00.000+07:00
 featuredImage: /images/uploads/vì-sao-nhiều-bản-brief-“đúng”-nhưng-vẫn-làm-hỏng-sáng-tạo-.png
 excerpt: Creative Brief không phải thủ tục hành chính nhưng mang yếu tố quyết

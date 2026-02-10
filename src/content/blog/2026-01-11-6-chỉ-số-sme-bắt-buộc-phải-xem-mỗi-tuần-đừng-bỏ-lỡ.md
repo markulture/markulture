@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: 6 chỉ số SME bắt buộc phải xem mỗi tuần, đừng bỏ lỡ
 slug: 6-chi-so-sme-bat-buoc-phai-xem-moi-tuan-dung-bo-lo
 date: 2026-01-11T20:24:00.000+07:00

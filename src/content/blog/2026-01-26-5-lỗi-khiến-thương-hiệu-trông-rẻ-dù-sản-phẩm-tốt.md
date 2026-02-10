@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: 5 lỗi khiến thương hiệu trông rẻ dù sản phẩm tốt
 slug: 5-loi-khien-thuong-hieu-trong-re-du-san-pham-tot
 date: 2026-01-26T10:37:00.000+07:00

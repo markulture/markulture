@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: "Google Zero: Vì sao lượt truy cập website giảm dù vẫn làm SEO? Cách xử
   lý cho doanh nghiệp SMEs trước 2026"
 slug: google-zero-vi-sao-luot-truy-cap-website-giam-du-van-lam-seo

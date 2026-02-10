@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Markulture - The Agency Marketing
 description: Markulture đồng hành cùng doanh nghiệp xây dựng chiến lược
   marketing, tối ưu hiệu suất và tạo tăng trưởng thực bằng tư duy dữ liệu & sáng

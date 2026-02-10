@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: "Brand & Marketing Việt Nam 2025: Một năm ồn ào và thanh lọc"
 slug: brand-marketing-viet-nam-2025-mot-nam-on-ao-va-thanh-loc
 date: 2026-01-18T21:09:00.000+07:00

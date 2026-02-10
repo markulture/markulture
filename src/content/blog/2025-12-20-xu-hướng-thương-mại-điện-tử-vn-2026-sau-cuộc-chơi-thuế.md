@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: Xu hướng thương mại điện tử VN 2026 sau cuộc chơi "thuế"
 slug: xu-huong-thuong-mai-dien-tu-vn-2026-sau-cuoc-choi-thue
 date: 2025-12-20T21:57:00.000+07:00
