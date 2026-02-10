@@ -1236,17 +1236,32 @@
           
         }
 
-        // Set up change listener
-        this.editor.on('component:add component:remove component:update', () => {
-          const html = this.editor.getHtml();
-          const css = this.editor.getCss();
-          const fullContent = html + (css ? `<style>${css}</style>` : '');
-          
-          this.setState({ value: fullContent });
-          if (onChange) {
-            onChange(fullContent);
-          }
-        });
+        // Set up change listener — debounced to avoid excessive saves
+        let saveTimeout = null;
+        const triggerSave = () => {
+          clearTimeout(saveTimeout);
+          saveTimeout = setTimeout(() => {
+            const html = this.editor.getHtml();
+            const css = this.editor.getCss();
+            const fullContent = html + (css ? `<style>${css}</style>` : '');
+            
+            this.setState({ value: fullContent });
+            if (onChange) {
+              onChange(fullContent);
+            }
+          }, 300);
+        };
+
+        // Component structure changes
+        this.editor.on('component:add component:remove component:update', triggerSave);
+        // Class/selector changes (adding/removing classes in the class panel)
+        this.editor.on('component:styleUpdate', triggerSave);
+        this.editor.on('selector:add selector:remove selector:state', triggerSave);
+        // Style property changes via the style manager
+        this.editor.on('style:property:update', triggerSave);
+        // Catch-all for any component attribute change (includes class attribute)
+        this.editor.on('component:update:attributes', triggerSave);
+        this.editor.on('component:update:classes', triggerSave);
 
         // Set up load listener to validate countdown components and handle initial content
         this.editor.on('load', () => {
