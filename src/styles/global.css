@@ -48,6 +48,9 @@ html {
   .slider-item-responsive {
     width: 33.333333%;
   }
+  .half-width {
+    width: 50%;
+  }
 }
 
 /* Center horizontally utility */
