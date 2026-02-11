@@ -6,7 +6,7 @@ import { getEntry } from 'astro:content';
 const page = await getEntry('pages', 'insights');
 ---
 
-<Layout title="Insights - Markulture" description="Latest insights and strategies on Social Media, Paid Media & Video Marketing">
+<Layout title={page.data.title} description={page.data.description}>
   <Navigation />
   {page && page.data.bodyVisual && (
     <div class="bg-white" set:html={page.data.bodyVisual} />

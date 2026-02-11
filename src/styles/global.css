@@ -63,6 +63,11 @@ html {
   line-height: 1.2 !important;
 }
 
+/* Overlay gradient for image cards */
+.overlay-gradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
+}
+
 /* Override inline font-family from CMS content */
 body, body * {
   font-family: 'Be Vietnam Pro', sans-serif !important;

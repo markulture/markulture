@@ -107,6 +107,18 @@ collections:
             name: "bodyVisual"
             widget: "grapesjs"
             required: false
+      - label: "Trang Career"
+        name: "career"
+        file: "src/content/pages/career.md"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Mô tả", name: "description", widget: "text", required: false}
+          - {label: "Xem trước SEO", name: "seoPreview", widget: "google-snippet-preview", required: false}
+          - {label: "Hành động trang trực tiếp", name: "livePageActions", widget: "live-page-opener", required: false}
+          - label: "Nội dung (Trình soạn thảo trực quan)"
+            name: "bodyVisual"
+            widget: "grapesjs"
+            required: false
       - label: "Trang Liên Hệ"
         name: "contact"
         file: "src/content/pages/contact.md"
