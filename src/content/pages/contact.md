@@ -17,25 +17,26 @@ bodyVisual: "<body><!-- Navigation --><meta charset=\"UTF-8\"/><meta
   Hero Section --><section class=\"bg-gradient-to-b from-rose-50 to-white py-16
   md:py-24\"><div class=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
   text-center\"><h2 class=\"text-4xl md:text-5xl font-bold text-gray-900
-  mb-4\"><span class=\"a_GcMg font-feature-liga-off font-feature-clig-off
-  font-feature-calt-off text-decoration-none text-strikethrough-none\"
-  id=\"ifgxq2\">Cùng trò chuyện nhé</span></h2><p class=\"text-xl text-gray-600
-  max-w-2xl mx-auto\">Nếu có bất kỳ thắc mắc hay vấn đề gì đừng ngần ngại chia
-  sẻ cho Markulture biết.</p></div></section><!-- Main Content --><section
-  id=\"contact\" class=\"py-16 md:py-24\"><div class=\"max-w-7xl mx-auto px-4
-  sm:px-6 lg:px-8\"><div class=\"grid md:grid-cols-3 gap-12\"><!-- Contact Form
-  --><div class=\"md:col-span-2\"><div class=\"bg-white rounded-lg shadow-md
-  p-8\"><h3 class=\"text-2xl font-bold text-gray-900 mb-6\">Để lại lời nhắn cho
-  Markulture ở đây nhé</h3><form method=\"get\" class=\"space-y-6\"><div
-  class=\"grid md:grid-cols-2 gap-6\"><div><label class=\"block text-gray-700
-  font-medium mb-2\">Full Name</label><input type=\"text\" placeholder=\"Your
-  name\" class=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2
-  focus:ring-rose-500 focus:border-transparent outline-none\"/></div><div><label
-  class=\"block text-gray-700 font-medium mb-2\">Email</label><input
-  type=\"email\" placeholder=\"your@email.com\" class=\"w-full px-4 py-3 border
+  mb-4\"><span id=\"ifgxq2\" class=\"a_GcMg font-feature-liga-off
+  font-feature-clig-off font-feature-calt-off text-decoration-none
+  text-strikethrough-none\">Cùng trò chuyện nhé</span></h2><p class=\"text-xl
+  text-gray-600 max-w-2xl mx-auto\">Nếu có bất kỳ thắc mắc hay vấn đề gì đừng
+  ngần ngại chia sẻ cho Markulture biết.</p></div></section><!-- Main Content
+  --><section id=\"contact\" class=\"py-16 md:py-24\"><div class=\"max-w-7xl
+  mx-auto px-4 sm:px-6 lg:px-8\"><div class=\"grid md:grid-cols-3 gap-12\"><!--
+  Contact Form --><div class=\"md:col-span-2\"><div class=\"bg-white rounded-lg
+  shadow-md p-8\"><h3 class=\"text-2xl font-bold text-gray-900 mb-6\">Để lại lời
+  nhắn cho Markulture ở đây nhé</h3><form method=\"get\"
+  class=\"space-y-6\"><div class=\"grid md:grid-cols-2 gap-6\"><div><label
+  class=\"block text-gray-700 font-medium mb-2\">Full Name</label><input
+  type=\"text\" placeholder=\"Your name\" class=\"w-full px-4 py-3 border
   border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500
-  focus:border-transparent outline-none\"/></div></div><div class=\"grid
-  md:grid-cols-2 gap-6\"><div><label class=\"block text-gray-700 font-medium
+  focus:border-transparent outline-none\"/></div><div><label class=\"block
+  text-gray-700 font-medium mb-2\">Email</label><input type=\"email\"
+  placeholder=\"your@email.com\" class=\"w-full px-4 py-3 border border-gray-300
+  rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent
+  outline-none\"/></div></div><div class=\"grid md:grid-cols-2
+  gap-6\"><div><label class=\"block text-gray-700 font-medium
   mb-2\">Phone</label><input type=\"tel\" placeholder=\"(555) 000-0000\"
   class=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2
   focus:ring-rose-500 focus:border-transparent outline-none\"/></div><div><label
@@ -81,7 +82,7 @@ bodyVisual: "<body><!-- Navigation --><meta charset=\"UTF-8\"/><meta
   20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z\"></path><path
   stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15
   11a3 3 0 11-6 0 3 3 0 016 0z\"></path></svg></div><div><h4
-  class=\"font-semibold text-gray-900 mb-1\">Location</h4><p
+  class=\"font-semibold text-gray-900 mb-1\">Địa chỉ</h4><p
   class=\"text-gray-600\">30 Thịnh Quang</p><p class=\"text-gray-600\">Đống Đa,
   Hà Nội</p></div></div></div><!-- Social Media --><div class=\"bg-white
   rounded-lg shadow-md p-6\"><h4 class=\"font-semibold text-gray-900
