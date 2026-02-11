@@ -63,6 +63,11 @@ html {
   line-height: 1.2 !important;
 }
 
+/* 9:16 aspect ratio for portrait video cards */
+.aspect-9-16 {
+  aspect-ratio: 9 / 16;
+}
+
 /* Overlay gradient for image cards */
 .overlay-gradient {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
