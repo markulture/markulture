@@ -1,37 +1,40 @@
 ---
 title: Insights
-description: The weekly newsletter that will keep you up-to-speed on all things Social
+description: Bản tin hàng tuần tổng hợp các chuyển động mới nhất của mạng xã
+  hội, mang đến insight giá trị cho marketer và nhà quản lý.
 bodyVisual: >-
   <body><div id="ivi5"><section class="py-24 bg-white"><div class="container
   mx-auto px-4"><div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24
   items-center"><!-- Left Content --><div class="relative"><h1 class="text-3xl
   md:text-4xl lg:text-5xl font-bold mb-12 leading-tight tracking-tight
-  pt-20">The weekly newsletter that will keep you up-to-speed <span
-  class="text-[#5EEAD4]">on all things Social</span></h1><p class="font-bold
-  text-xl md:text-2xl">This Week In Social</p></div><!-- Right Content --><div
-  class="lg:pl-12"><p class="text-xl mb-8 font-medium">What can you
-  expect?</p><ul class="space-y-6"><li class="flex items-center gap-4"><div
-  class="w-8 h-8 rounded-full bg-[#5EEAD4] flex items-center justify-center
-  flex-shrink-0 border-2 border-black"><svg width="16" height="16" viewBox="0 0
-  14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6666
-  3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2"
-  stroke-linecap="round" stroke-linejoin="round"></path></svg></div><span
-  class="text-lg md:text-xl font-medium">Insider Social Platform
-  Updates</span></li><li class="flex items-center gap-4"><div class="w-8 h-8
-  rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0
-  border-2 border-black"><svg width="16" height="16" viewBox="0 0 14 14"
-  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6666 3.5L5.24992
-  9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round"
-  stroke-linejoin="round"></path></svg></div><span class="text-lg md:text-xl
-  font-medium">New Social Algorithm Tweaks</span></li><li class="flex
-  items-center gap-4"><div class="w-8 h-8 rounded-full bg-[#5EEAD4] flex
-  items-center justify-center flex-shrink-0 border-2 border-black"><svg
+  pt-20"><span class="a_GcMg font-feature-liga-off font-feature-clig-off
+  font-feature-calt-off text-decoration-none text-strikethrough-none"
+  id="i9myr">Bản tin hàng tuần giúp bạn luôn bắt kịp mọi chuyển động của
+  Social</span></h1><p class="font-bold text-xl md:text-2xl">This Week In
+  Social</p></div><!-- Right Content --><div class="lg:pl-12"><p class="text-xl
+  mb-8 font-medium">Bạn sẽ nhận được gì?<br/></p><ul class="space-y-6"><li
+  class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-[#5EEAD4]
+  flex items-center justify-center flex-shrink-0 border-2 border-black"><svg
   width="16" height="16" viewBox="0 0 14 14" fill="none"
   xmlns="http://www.w3.org/2000/svg"><path d="M11.6666 3.5L5.24992
   9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round"
   stroke-linejoin="round"></path></svg></div><span class="text-lg md:text-xl
-  font-medium">Social Strategies That
-  Work</span></li></ul></div></div></div></section></div><div
+  font-medium">Cập nhật tin nội bộ từ các nền tảng social</span></li><li
+  class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-[#5EEAD4]
+  flex items-center justify-center flex-shrink-0 border-2 border-black"><svg
+  width="16" height="16" viewBox="0 0 14 14" fill="none"
+  xmlns="http://www.w3.org/2000/svg"><path d="M11.6666 3.5L5.24992
+  9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round"
+  stroke-linejoin="round"></path></svg></div><span class="text-lg md:text-xl
+  font-medium">Những thay đổi mới nhất của thuật toán<br/></span></li><li
+  class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-[#5EEAD4]
+  flex items-center justify-center flex-shrink-0 border-2 border-black"><svg
+  width="16" height="16" viewBox="0 0 14 14" fill="none"
+  xmlns="http://www.w3.org/2000/svg"><path d="M11.6666 3.5L5.24992
+  9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round"
+  stroke-linejoin="round"></path></svg></div><span class="text-lg md:text-xl
+  font-medium">Chiến lược social thực sự hiệu quả, đã được kiểm
+  chứng</span></li></ul></div></div></div></section></div><div
   id="iin5d"></div><div id="il8xp"><section class="pb-24 bg-white"><div
   class="container mx-auto px-4"><div class="rounded-[2.5rem] overflow-hidden
   flex flex-col lg:flex-row min-h-[500px]"><!-- Left Image --><div
@@ -39,8 +42,8 @@ bodyVisual: >-
   src="https://placehold.co/800x600" alt="Markulture Team" class="absolute
   inset-0 w-full h-full object-cover"/></div><!-- Right Content --><div
   class="half-width bg-[#5EEAD4] p-8 md:p-16 flex flex-col justify-center"><h2
-  class="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-                          Join 16,500+ CMO's, Marketing Managers and Social Media enthusiasts who read our newsletter every week.
+  class="text-3xl md:text-4xl font-bold mb-8 leading-tight">Nhập email của bạn
+  và dùng thử tại đây
                       </h2><form class="flex flex-col sm:flex-row gap-4 max-w-xl"><div class="relative flex-grow"><div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 2L11 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><input type="email" placeholder="Work Email Address *" required class="w-full pl-12 pr-4 py-4 rounded-full border-none focus:ring-2 focus:ring-black outline-none"/></div><button type="submit" class="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-colors whitespace-nowrap">
                               Try It
                           </button></form></div></div></div></section></div><div id="io5ei"><section class="py-24 bg-white"><div class="container mx-auto px-4"><h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Why you'll love the newsletter</h2><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><!-- Card 1: Relevant --><div class="bg-black text-white p-8 rounded-[2rem] flex flex-col h-full min-h-[400px]"><div class="mb-auto"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mb-6"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><h3 class="text-3xl font-bold mb-4">Relevant</h3><p class="text-gray-300 text-lg leading-relaxed">
@@ -49,5 +52,5 @@ bodyVisual: >-
                           Not only do we send industry updates &amp; announcements, but we'll let you in on what's working for our clients today across social content, paid media, video &amp; influencer.
                       </p></div><!-- Card 3: Convenience --><div class="bg-gray-100 text-black p-8 rounded-[2rem] flex flex-col h-full min-h-[400px]"><div class="mb-auto"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mb-6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><path d="m22 6-10 7L2 6"></path></svg></div><h3 class="text-3xl font-bold mb-4">Convenience</h3><p class="text-gray-600 text-lg leading-relaxed">
                           Delivered conveniently to your inbox every Tuesday!
-                      </p></div></div></div></section></div></body><style>* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}</style>
+                      </p></div></div></div></section></div></body><style>* { box-sizing: border-box; } body {margin: 0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;}#i9myr{color:rgba(0,0,0,var(--O42jJQ,1));caret-color:rgb(0, 0, 0);--Ys-XuQ:none;font-weight:400;font-kerning:normal;}</style>
 ---
