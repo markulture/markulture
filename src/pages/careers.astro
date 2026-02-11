@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import { getEntry } from 'astro:content';
-const page = await getEntry('pages', 'career');
+const page = await getEntry('pages', 'careers');
 ---
 <Layout title={page.data.title} description={page.data.description}>
   <Navigation />

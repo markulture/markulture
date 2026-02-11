@@ -108,8 +108,8 @@ collections:
             widget: "grapesjs"
             required: false
       - label: "Trang Career"
-        name: "career"
-        file: "src/content/pages/career.md"
+        name: "careers"
+        file: "src/content/pages/careers.md"
         fields:
           - {label: "Tiêu đề", name: "title", widget: "string"}
           - {label: "Mô tả", name: "description", widget: "text", required: false}
