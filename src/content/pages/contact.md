@@ -115,7 +115,10 @@ bodyVisual: "<body><!-- Navigation --><meta charset=\"UTF-8\"/><meta
   body {margin:
   0;}*{box-sizing:border-box;}body{margin-top:0px;margin-right:0px;margin-botto\
   m:0px;margin-left:0px;}#ifgxq2{color:rgba(0,0,0,var(--O42jJQ,1));caret-color:\
-  rgb(0, 0, 0);--Ys-XuQ:none;font-weight:400;font-kerning:normal;}</style>"
+  rgb(0, 0,
+  0);--Ys-XuQ:none;font-weight:400;font-kerning:normal;}.bg-white.shadow-sm.sti\
+  cky.top-0.z-50{display:none;}.bg-gray-900.text-gray-300.py-12{display:none;}<\
+  /style>"
 ---
 
 # Liên hệ với Markulture
