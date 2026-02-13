@@ -71,6 +71,55 @@ html {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
 }
 
+/* Brand color overrides - replacing teal with #b4242e */
+.bg-teal-400 {
+  background-color: #b4242e !important;
+}
+
+.bg-teal-500 {
+  background-color: #b4242e !important;
+}
+
+.bg-teal-300 {
+  background-color: #b4242e !important;
+}
+
+.bg-teal-50 {
+  background-color: #fef2f2 !important;
+}
+
+.text-teal-400 {
+  color: #b4242e !important;
+}
+
+.text-teal-500 {
+  color: #991b1b !important;
+}
+
+.text-teal-600 {
+  color: #7f1d1d !important;
+}
+
+.hover\:bg-teal-500:hover {
+  background-color: #991b1b !important;
+}
+
+.hover\:text-teal-400:hover {
+  color: #b4242e !important;
+}
+
+.focus\:ring-teal-400:focus {
+  --tw-ring-color: #b4242e !important;
+}
+
+.from-teal-400 {
+  --tw-gradient-from: #b4242e !important;
+}
+
+.to-teal-300 {
+  --tw-gradient-to: #c94a53 !important;
+}
+
 /* Override inline font-family from CMS content */
 body, body * {
   font-family: 'Be Vietnam Pro', sans-serif !important;

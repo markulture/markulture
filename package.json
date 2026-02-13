@@ -13,7 +13,7 @@
     "publish": true
   },
   "scripts": {
-    "dev": "NODE_OPTIONS='--max-old-space-size=4096' astro dev",
+    "dev": "astro dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096' astro build",
     "preview": "astro preview",
     "deploy": "wrangler deploy",
