@@ -170,3 +170,16 @@ collections:
             display_fields: ["title"]
             required: false
             hint: "Chọn landing page sẽ được hiển thị làm trang chủ"
+      - label: "Footer"
+        name: "footer"
+        file: "src/content/settings/footer.md"
+        editor:
+          preview: false
+          frame: true
+          size: large
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "hidden", default: "Footer"}
+          - label: "Nội dung Footer (Trình soạn thảo trực quan)"
+            name: "bodyVisual"
+            widget: "grapesjs"
+            required: false

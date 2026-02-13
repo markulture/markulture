@@ -31,8 +31,17 @@ const landing = defineCollection({
   }),
 });
 
+const settings = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    bodyVisual: z.string().optional(),
+  }),
+});
+
 export const collections = {
   blog,
   pages,
   landing,
+  settings,
 };
