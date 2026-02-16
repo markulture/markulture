@@ -1,0 +1,261 @@
+---
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const allBlogPosts = await getCollection('blog');
+  const sortedPosts = allBlogPosts.sort((a, b) => 
+    new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  );
+  
+  return paginate(sortedPosts, { pageSize: 6 });
+};
+
+const { page } = Astro.props;
+const posts = page.data;
+
+// Get all unique tags for categories
+const allBlogPosts = await getCollection('blog');
+const allTags = [...new Set(allBlogPosts.flatMap(post => post.data.tags || []))];
+const categories = [
+  { name: 'All', slug: 'all', active: true },
+  ...allTags.map(tag => ({ name: tag, slug: tag, active: false }))
+];
+
+// For page 1, use special layout
+const isFirstPage = page.currentPage === 1;
+const featuredPost = isFirstPage ? posts[0] : null;
+const sidebarPosts = isFirstPage ? posts.slice(1, 3) : [];
+const gridPosts = isFirstPage ? posts.slice(3) : posts;
+---
+
+<Layout title="The Social Media Blog - Markulture" description="Insights & strategies on Social Media, Paid Media & Video Marketing">
+  <Navigation />
+  
+  <main class="min-h-screen bg-white py-12 pt-28">
+    <div class="container mx-auto px-4 pt-10">
+      
+      <!-- Header Section -->
+      <div class="mb-12">
+        <div class="flex items-start gap-4 mb-8">
+          <div class="relative">
+            <h1 class="text-5xl md:text-6xl font-bold text-black tracking-tight relative z-10">
+              The Social<br/>Media Blog
+            </h1>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="flex flex-wrap gap-3 overflow-x-auto pb-4 scrollbar-hide">
+          {categories.map(cat => (
+            <a 
+              href={cat.slug === 'all' ? '/blog' : `/blog/tag/${cat.slug}`}
+              class={`px-6 py-2 rounded-full border text-sm font-medium transition-colors whitespace-nowrap
+                ${cat.active 
+                  ? 'bg-[#b4242e] border-[#b4242e] text-white' 
+                  : 'bg-white border-gray-200 text-gray-600 hover:border-gray-400'
+                }`}
+            >
+              {cat.name}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Page 1: Featured Layout */}
+      {isFirstPage && (
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+          
+          <!-- Left Column: Featured Post (8 cols) -->
+          <div class="lg:col-span-8">
+            {featuredPost && (
+              <article class="group cursor-pointer h-full flex flex-col">
+                <a href={`/blog/${featuredPost.data.slug || featuredPost.slug}`} class="relative aspect-[4/3] md:aspect-[16/10] overflow-hidden rounded-3xl mb-6 bg-[#5EEAD4] block">
+                  {featuredPost.data.featuredImage ? (
+                    <img 
+                      src={featuredPost.data.featuredImage} 
+                      alt={featuredPost.data.title}
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div class="w-full h-full flex items-center justify-center bg-[#5EEAD4] p-8">
+                      <h3 class="text-4xl font-bold text-white text-center opacity-50">{featuredPost.data.title}</h3>
+                    </div>
+                  )}
+                </a>
+                
+                <div class="flex flex-col flex-grow">
+                  <div class="flex items-center gap-4 text-sm font-bold mb-3">
+                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <span class="text-gray-500 uppercase tracking-wider">{featuredPost.data.tags?.[0] || 'Blog'}</span>
+                  </div>
+                  
+                  <h2 class="text-3xl md:text-4xl font-bold text-black group-hover:text-gray-700 transition-colors mb-3">
+                    <a href={`/blog/${featuredPost.data.slug || featuredPost.slug}`}>
+                      {featuredPost.data.title}
+                    </a>
+                  </h2>
+                </div>
+              </article>
+            )}
+          </div>
+
+          <!-- Right Column: Sidebar (4 cols) -->
+          <div class="lg:col-span-4 space-y-8">
+            
+            <!-- Newsletter Box -->
+            <div class="bg-[#F3F4F6] p-8 rounded-3xl">
+              <h3 class="text-xl font-bold text-black mb-3">Stay up to date</h3>
+              <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                Want to receive the most up to date insights & strategies on everything to do with Social Media, Paid Media & Video Marketing? Sign up to receive our weekly email.
+              </p>
+              
+              <form class="flex flex-col gap-3">
+                <div class="relative">
+                  <input 
+                    type="email" 
+                    placeholder="Work Email Address *" 
+                    class="w-full px-4 py-3 rounded-full border-none focus:ring-2 focus:ring-black text-sm"
+                    required
+                  />
+                  <button 
+                    type="submit"
+                    class="absolute right-1 top-1 bottom-1 bg-black text-white px-6 rounded-full text-sm font-bold hover:bg-gray-800 transition-colors"
+                  >
+                    Try It
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Sidebar Posts -->
+            <div class="space-y-8">
+              {sidebarPosts.map(post => (
+                <article class="group cursor-pointer">
+                  <a href={`/blog/${post.data.slug || post.slug}`} class="relative aspect-[16/10] overflow-hidden rounded-2xl mb-4 bg-[#5EEAD4] block">
+                    {post.data.featuredImage ? (
+                      <img 
+                        src={post.data.featuredImage} 
+                        alt={post.data.title}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div class="w-full h-full flex items-center justify-center bg-[#5EEAD4] p-4">
+                        <h4 class="text-xl font-bold text-white text-center opacity-50">{post.data.title}</h4>
+                      </div>
+                    )}
+                  </a>
+                  
+                  <div>
+                    <h3 class="text-xl font-bold text-black group-hover:text-gray-700 transition-colors mb-2 leading-tight">
+                      <a href={`/blog/${post.data.slug || post.slug}`}>
+                        {post.data.title}
+                      </a>
+                    </h3>
+                    
+                    <div class="flex items-center gap-3 text-xs font-bold">
+                      <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                      <span class="text-gray-500 uppercase tracking-wider">{post.data.tags?.[0] || 'Blog'}</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      <!-- Articles Grid -->
+      {gridPosts.length > 0 && (
+        <div class={isFirstPage ? "border-t pt-12" : ""}>
+          {isFirstPage && <h3 class="text-2xl font-bold mb-8">More Articles</h3>}
+          {!isFirstPage && <h3 class="text-2xl font-bold mb-8">Page {page.currentPage}</h3>}
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {gridPosts.map(post => (
+              <article class="group cursor-pointer">
+                <a href={`/blog/${post.data.slug || post.slug}`} class="relative aspect-[16/10] overflow-hidden rounded-2xl mb-4 bg-gray-100 block">
+                  {post.data.featuredImage ? (
+                    <img 
+                      src={post.data.featuredImage} 
+                      alt={post.data.title}
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div class="w-full h-full flex items-center justify-center bg-[#5EEAD4] p-4">
+                      <h4 class="text-xl font-bold text-white text-center opacity-50">{post.data.title}</h4>
+                    </div>
+                  )}
+                </a>
+                <h3 class="text-xl font-bold text-black group-hover:text-gray-700 transition-colors mb-2">
+                  <a href={`/blog/${post.data.slug || post.slug}`}>
+                    {post.data.title}
+                  </a>
+                </h3>
+                <div class="flex items-center gap-3 text-xs font-bold">
+                  <span class="text-black">5 min read</span>
+                  <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                  <span class="text-gray-500 uppercase tracking-wider">{post.data.tags?.[0] || 'Blog'}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Pagination -->
+      <nav class="flex justify-center items-center gap-2 mt-12 pt-8 border-t" aria-label="Pagination">
+        {page.url.prev && (
+          <a 
+            href={page.url.prev}
+            class="px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100 transition-colors flex items-center gap-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Previous
+          </a>
+        )}
+        
+        <div class="flex items-center gap-1">
+          {Array.from({ length: page.lastPage }, (_, i) => i + 1).map(pageNum => (
+            <a
+              href={pageNum === 1 ? '/blog' : `/blog/${pageNum}`}
+              class={`w-10 h-10 flex items-center justify-center rounded-full text-sm font-medium transition-colors
+                ${pageNum === page.currentPage 
+                  ? 'bg-[#b4242e] text-white' 
+                  : 'text-gray-700 hover:bg-gray-100'
+                }`}
+            >
+              {pageNum}
+            </a>
+          ))}
+        </div>
+        
+        {page.url.next && (
+          <a 
+            href={page.url.next}
+            class="px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-gray-100 transition-colors flex items-center gap-2"
+          >
+            Next
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        )}
+      </nav>
+
+      <!-- Page info -->
+      <p class="text-center text-gray-500 text-sm mt-4">
+        Showing {(page.currentPage - 1) * page.size + 1} - {Math.min(page.currentPage * page.size, page.total)} of {page.total} articles
+      </p>
+
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
