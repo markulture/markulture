@@ -7,16 +7,16 @@ bodyVisual: >-
   mx-auto px-4"><div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24
   items-center"><!-- Left Content --><div class="relative"><h1 class="text-3xl
   md:text-4xl lg:text-5xl font-bold mb-12 leading-tight tracking-tight
-  pt-20"><span class="a_GcMg font-feature-liga-off font-feature-clig-off
-  font-feature-calt-off text-decoration-none text-strikethrough-none"
-  id="i9myr">Bản tin hàng tuần giúp bạn luôn bắt kịp mọi chuyển động của
-  Social</span></h1><p class="font-bold text-xl md:text-2xl">This Week In
-  Social</p></div><!-- Right Content --><div class="lg:pl-12"><p class="text-xl
-  mb-8 font-medium">Bạn sẽ nhận được gì?<br/></p><ul class="space-y-6"><li
-  class="flex items-center gap-4"><div class="w-8 h-8 rounded-full bg-[#5EEAD4]
-  flex items-center justify-center flex-shrink-0 border-2 border-black"><svg
-  width="16" height="16" viewBox="0 0 14 14" fill="none"
-  xmlns="http://www.w3.org/2000/svg"><path d="M11.6666 3.5L5.24992
+  pt-20"><span id="i9myr" class="a_GcMg font-feature-liga-off
+  font-feature-clig-off font-feature-calt-off text-decoration-none
+  text-strikethrough-none">Bản tin hàng tuần giúp bạn luôn bắt kịp mọi chuyển
+  động của Social</span></h1><p class="font-bold text-xl md:text-2xl">This Week
+  In Social</p></div><!-- Right Content --><div class="lg:pl-12"><p
+  class="text-xl mb-8 font-medium">Bạn sẽ nhận được gì?<br/></p><ul
+  class="space-y-6"><li class="flex items-center gap-4"><div class="w-8 h-8
+  rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0
+  border-2 border-black"><svg width="16" height="16" viewBox="0 0 14 14"
+  fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6666 3.5L5.24992
   9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round"
   stroke-linejoin="round"></path></svg></div><span class="text-lg md:text-xl
   font-medium">Cập nhật tin nội bộ từ các nền tảng social</span></li><li
@@ -39,7 +39,7 @@ bodyVisual: >-
   class="container mx-auto px-4"><div class="rounded-[2.5rem] overflow-hidden
   flex flex-col lg:flex-row min-h-[500px]"><!-- Left Image --><div
   class="half-width relative min-h-[300px]"><img
-  src="https://placehold.co/800x600" alt="Markulture Team" class="absolute
+  src="/images/uploads/trial_email.svg" alt="Markulture Team" class="absolute
   inset-0 w-full h-full object-cover"/></div><!-- Right Content --><div
   class="half-width bg-[#5EEAD4] p-8 md:p-16 flex flex-col justify-center"><h2
   class="text-3xl md:text-4xl font-bold mb-8 leading-tight">Nhập email của bạn
