@@ -11,33 +11,32 @@ bodyVisual: '<body><div id="iu35"><div class="container mx-auto px-4"><!-- Top
   leading-tight">Chúng tôi không giúp bạn</h1><p class="text-lg mb-8
   max-w-md">Chúng tôi đồng hành cùng bạn</p></div></div><!-- Right Card (Image +
   Quote) --><div class="relative rounded-[2.5rem] overflow-hidden group"><img
-  src="/images/uploads/trial_email.svg" alt="Office Culture" class="absolute
-  inset-0 w-full h-full object-cover"/></div></div></div></div><div
-  id="ibgs2"><section class="py-24 bg-gray-50"><div class="container mx-auto
-  px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
-  mb-24"><!-- Social Card --><div class="bg-white rounded-[2rem] border-t-[12px]
-  border-black p-8 flex flex-col h-full shadow-sm hover:shadow-md
-  transition-shadow"><div class="w-14 h-14 bg-black rounded-xl flex items-center
-  justify-center mb-8"><svg width="24" height="24" viewBox="0 0 24 24"
-  fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-  stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"
-  ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div><h3
-  class="text-2xl font-bold mb-4">Nghiên cứu &amp; Chiến lược</h3><p
-  class="text-gray-600 mb-8 min-h-[3rem]">Chúng tôi phát triển các cộng đồng xã
-  hội bằng các chiến lược xã hội dành riêng cho nền tảng</p><ul class="space-y-3
-  mb-8 flex-grow"><li class="flex items-start gap-3"><div class="w-5 h-5
+  src="/images/uploads/gtcl.svg" alt="Office Culture" class="absolute inset-0
+  w-full h-full object-cover"/></div></div></div></div><div id="ibgs2"><section
+  class="py-24 bg-gray-50"><div class="container mx-auto px-4"><div class="grid
+  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24"><!-- Social Card
+  --><div class="bg-white rounded-[2rem] border-t-[12px] border-black p-8 flex
+  flex-col h-full shadow-sm hover:shadow-md transition-shadow"><div class="w-14
+  h-14 bg-black rounded-xl flex items-center justify-center mb-8"><svg
+  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white"
+  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5"
+  y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18"
+  x2="12.01" y2="18"></line></svg></div><h3 class="text-2xl font-bold
+  mb-4">Nghiên cứu &amp; Chiến lược</h3><p class="text-gray-600 mb-8
+  min-h-[3rem]">Chúng tôi phát triển các cộng đồng xã hội bằng các chiến lược xã
+  hội dành riêng cho nền tảng</p><ul class="space-y-3 mb-8 flex-grow"><li
+  class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-[#5EEAD4]
+  flex items-center justify-center flex-shrink-0 mt-1"><svg width="10"
+  height="10" viewBox="0 0 14 14" fill="none"><path d="M11.6666 3.5L5.24992
+  9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round"
+  stroke-linejoin="round"></path></svg></div><span class="text-sm
+  font-medium">Nghiên cứu thị trường và khách hàng (định lượng &amp; định
+  tính).</span></li><li class="flex items-start gap-3"><div class="w-5 h-5
   rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0
   mt-1"><svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path
   d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2"
   stroke-linecap="round" stroke-linejoin="round"></path></svg></div><span
-  class="text-sm font-medium">Nghiên cứu thị trường và khách hàng (định lượng
-  &amp; định tính).</span></li><li class="flex items-start gap-3"><div
-  class="w-5 h-5 rounded-full bg-[#5EEAD4] flex items-center justify-center
-  flex-shrink-0 mt-1"><svg width="10" height="10" viewBox="0 0 14 14"
-  fill="none"><path d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black"
-  stroke-width="2" stroke-linecap="round"
-  stroke-linejoin="round"></path></svg></div><span class="text-sm
-  font-medium">Đánh giá thương hiệu, chiến lược thâm nhập thị
+  class="text-sm font-medium">Đánh giá thương hiệu, chiến lược thâm nhập thị
   trường.<br/></span></li><li class="flex items-start gap-3"><div class="w-5 h-5
   rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0
   mt-1"><svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path
