@@ -1,7 +1,7 @@
 ---
 title: Meme đã trở thành ngôn ngữ Marketing mới tại thị trường?
 slug: meme-tro-thanh-ngon-ngu-marketing-moi
-date: 2026-03-24T10:38:00.000+07:00
+date: 2026-04-02T16:22:00.000+07:00
 featuredImage: /images/uploads/67.png
 excerpt: >
   Tại sao Meme đã trở thành ngôn ngữ Marketing mới năm 2026? Giải mã sức mạnh
