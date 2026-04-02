@@ -58,6 +58,9 @@
       const { onChange } = this.props;
       const { value } = this.state;
 
+      const cloudName = 'dvxrb1uxm';
+      const unsignedUploadPreset = 'markulture';
+
       window.jQuery(this.editorRef).summernote({
         height: 300,
         toolbar: [
@@ -79,6 +82,38 @@
           onInit: () => {
             if (value) {
               window.jQuery(this.editorRef).summernote('code', value);
+            }
+          },
+          onImageUpload: (files) => {
+            for (const file of files) {
+              const formData = new FormData();
+              formData.append('file', file);
+              formData.append('upload_preset', unsignedUploadPreset);
+
+              fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+                method: 'POST',
+                body: formData
+              })
+              .then(res => {
+                if (!res.ok) {
+                  return res.text().then(text => {
+                    console.error('Cloudinary response status:', res.status, text);
+                    throw new Error(`Upload failed: ${res.status} - ${text}`);
+                  });
+                }
+                return res.json();
+              })
+              .then(data => {
+                if (data.secure_url) {
+                  const img = document.createElement('img');
+                  img.src = data.secure_url;
+                  img.alt = file.name;
+                  window.jQuery(this.editorRef).summernote('insertNode', img);
+                }
+              })
+              .catch(err => {
+                console.error('Cloudinary upload failed:', err);
+              });
             }
           }
         }
