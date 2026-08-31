@@ -31,12 +31,12 @@ const { Content } = await aboutPage.render();
       <div class="bg-black text-white w-full max-w-6xl rounded-[2.5rem] overflow-hidden relative flex flex-col lg:flex-row shadow-2xl border border-gray-800 max-h-[90vh] lg:max-h-none overflow-y-auto lg:overflow-visible pointer-events-auto">
         
         <!-- Close Button -->
-        <button id="modal-close" class="absolute top-6 right-6 z-20 w-10 h-10 bg-[#5EEAD4] rounded-full flex items-center justify-center text-black hover:bg-white transition-colors">
+        <button id="modal-close" class="absolute top-6 right-6 z-20 w-10 h-10 bg-teal-400 rounded-full flex items-center justify-center text-black hover:bg-white transition-colors">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
 
         <!-- Image Side -->
-        <div class="w-full lg:w-5/12 bg-[#5EEAD4] relative min-h-[300px] lg:min-h-[600px] p-8 flex items-end justify-center">
+        <div class="w-full lg:w-5/12 bg-teal-400 relative min-h-[300px] lg:min-h-[600px] p-8 flex items-end justify-center">
            <img id="modal-image" src="" alt="" class="w-full h-auto object-contain max-h-[500px]" />
            <div class="absolute bottom-8 left-8 text-black lg:hidden">
               <h3 id="modal-name-mobile" class="text-2xl font-bold"></h3>
@@ -200,10 +200,10 @@ const { Content } = await aboutPage.render();
         dots.forEach((dot, idx) => {
           if (idx === currentIndex) {
             dot.classList.remove('bg-gray-300', 'w-2');
-            dot.classList.add('bg-[#5EEAD4]', 'w-8');
+            dot.classList.add('bg-teal-400', 'w-8');
           } else {
             dot.classList.add('bg-gray-300', 'w-2');
-            dot.classList.remove('bg-[#5EEAD4]', 'w-8');
+            dot.classList.remove('bg-teal-400', 'w-8');
           }
         });
       }

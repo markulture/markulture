@@ -120,7 +120,7 @@ const readingTime = calculateReadingTime(post.body);
                   />
                   <button 
                     type="submit"
-                    class="absolute right-2 top-2 bottom-2 bg-[#5EEAD4] text-black w-10 h-10 rounded-full flex items-center justify-center hover:bg-white transition-colors"
+                    class="absolute right-2 top-2 bottom-2 bg-teal-400 text-black w-10 h-10 rounded-full flex items-center justify-center hover:bg-white transition-colors"
                   >
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M3.33337 8H12.6667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -204,12 +204,12 @@ const readingTime = calculateReadingTime(post.body);
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
             `;
-            btn.classList.add('bg-[#5EEAD4]', 'text-black');
+            btn.classList.add('bg-teal-400', 'text-black');
             btn.classList.remove('bg-black', 'text-white');
             
             setTimeout(() => {
               btn.innerHTML = originalHTML;
-              btn.classList.remove('bg-[#5EEAD4]', 'text-black');
+              btn.classList.remove('bg-teal-400', 'text-black');
               btn.classList.add('bg-black', 'text-white');
             }, 2000);
           } catch (err) {

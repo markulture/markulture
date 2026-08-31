@@ -5,7 +5,7 @@ description: Markulture chuyên về Truyền thông xã hội, Quảng cáo tr�
   triển nhanh.
 bodyVisual: '<body><div id="iu35"><div class="container mx-auto px-4"><!-- Top
   Grid --><div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-24 h-[110vh]
-  lg:h-[80vh]"><!-- Left Card (Teal) --><div class="bg-[#5EEAD4]
+  lg:h-[80vh]"><!-- Left Card (Teal) --><div class="bg-teal-400
   rounded-[2.5rem] flex flex-col justify-center relative"><div class="absolute
   bottom-0 left-0 p-8 md:p-12"><h1 class="text-5xl md:text-6xl font-bold mb-6
   leading-tight">Chúng tôi không giúp bạn</h1><p class="text-lg mb-8
@@ -25,20 +25,20 @@ bodyVisual: '<body><div id="iu35"><div class="container mx-auto px-4"><!-- Top
   mb-4">Nghiên cứu &amp; Chiến lược</h3><p class="text-gray-600 mb-8
   min-h-[3rem]">Chúng tôi phát triển các cộng đồng xã hội bằng các chiến lược xã
   hội dành riêng cho nền tảng</p><ul class="space-y-3 mb-8 flex-grow"><li
-  class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-[#5EEAD4]
+  class="flex items-start gap-3"><div class="w-5 h-5 rounded-full bg-teal-400
   flex items-center justify-center flex-shrink-0 mt-1"><svg width="10"
   height="10" viewBox="0 0 14 14" fill="none"><path d="M11.6666 3.5L5.24992
   9.91667L2.33325 7" stroke="black" stroke-width="2" stroke-linecap="round"
   stroke-linejoin="round"></path></svg></div><span class="text-sm
   font-medium">Nghiên cứu thị trường và khách hàng (định lượng &amp; định
   tính).</span></li><li class="flex items-start gap-3"><div class="w-5 h-5
-  rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0
+  rounded-full bg-teal-400 flex items-center justify-center flex-shrink-0
   mt-1"><svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path
   d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2"
   stroke-linecap="round" stroke-linejoin="round"></path></svg></div><span
   class="text-sm font-medium">Đánh giá thương hiệu, chiến lược thâm nhập thị
   trường.<br/></span></li><li class="flex items-start gap-3"><div class="w-5 h-5
-  rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0
+  rounded-full bg-teal-400 flex items-center justify-center flex-shrink-0
   mt-1"><svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path
   d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2"
   stroke-linecap="round" stroke-linejoin="round"></path></svg></div><span
@@ -56,19 +56,19 @@ bodyVisual: '<body><div id="iu35"><div class="container mx-auto px-4"><!-- Top
   &amp; Sản xuất</h3><p class="text-gray-600 mb-8 min-h-[3rem]">Chúng tôi cung
   cấp các chiến dịch sáng tạo dựa trên hiệu suất</p><ul class="space-y-3 mb-8
   flex-grow"><li class="flex items-start gap-3"><div class="w-5 h-5 rounded-full
-  bg-[#5EEAD4] flex items-center justify-center flex-shrink-0 mt-1"><svg
+  bg-teal-400 flex items-center justify-center flex-shrink-0 mt-1"><svg
   width="10" height="10" viewBox="0 0 14 14" fill="none"><path d="M11.6666
   3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2"
   stroke-linecap="round" stroke-linejoin="round"></path></svg></div><span
   class="text-sm font-medium">Thiết kế thương hiệu (nhận diện, bao
   bì).</span></li><li class="flex items-start gap-3"><div class="w-5 h-5
-  rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0
+  rounded-full bg-teal-400 flex items-center justify-center flex-shrink-0
   mt-1"><svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path
   d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2"
   stroke-linecap="round" stroke-linejoin="round"></path></svg></div><span
   class="text-sm font-medium">Content Studio (copywriting, nội dung dài hạn,
   social).<br/></span></li><li class="flex items-start gap-3"><div class="w-5
-  h-5 rounded-full bg-[#5EEAD4] flex items-center justify-center flex-shrink-0
+  h-5 rounded-full bg-teal-400 flex items-center justify-center flex-shrink-0
   mt-1"><svg width="10" height="10" viewBox="0 0 14 14" fill="none"><path
   d="M11.6666 3.5L5.24992 9.91667L2.33325 7" stroke="black" stroke-width="2"
   stroke-linecap="round" stroke-linejoin="round"></path></svg></div><span
@@ -90,19 +90,19 @@ bodyVisual: '<body><div id="iu35"><div class="container mx-auto px-4"><!-- Top
   mb-4">Sự kiện &amp; Kích hoạt thương hiệu</h3><p class="text-gray-600 mb-8
   min-h-[3rem]">Cung cấp nội dung sáng tạo nổi bật trên Video, Thiết kế và
   Chuyển động</p><ul class="space-y-3 mb-8 flex-grow"><li class="flex
-  items-start gap-3"><div class="w-5 h-5 rounded-full bg-[#5EEAD4] flex
+  items-start gap-3"><div class="w-5 h-5 rounded-full bg-teal-400 flex
   items-center justify-center flex-shrink-0 mt-1"><svg width="10" height="10"
   viewBox="0 0 14 14" fill="none"><path d="M11.6666 3.5L5.24992 9.91667L2.33325
   7" stroke="black" stroke-width="2" stroke-linecap="round"
   stroke-linejoin="round"></path></svg></div><span class="text-sm
   font-medium">Brand activation, sampling, roadshow.</span></li><li class="flex
-  items-start gap-3"><div class="w-5 h-5 rounded-full bg-[#5EEAD4] flex
+  items-start gap-3"><div class="w-5 h-5 rounded-full bg-teal-400 flex
   items-center justify-center flex-shrink-0 mt-1"><svg width="10" height="10"
   viewBox="0 0 14 14" fill="none"><path d="M11.6666 3.5L5.24992 9.91667L2.33325
   7" stroke="black" stroke-width="2" stroke-linecap="round"
   stroke-linejoin="round"></path></svg></div><span class="text-sm
   font-medium">Hội nghị, triển lãm, trade show.<br/></span></li><li class="flex
-  items-start gap-3"><div class="w-5 h-5 rounded-full bg-[#5EEAD4] flex
+  items-start gap-3"><div class="w-5 h-5 rounded-full bg-teal-400 flex
   items-center justify-center flex-shrink-0 mt-1"><svg width="10" height="10"
   viewBox="0 0 14 14" fill="none"><path d="M11.6666 3.5L5.24992 9.91667L2.33325
   7" stroke="black" stroke-width="2" stroke-linecap="round"
