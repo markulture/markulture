@@ -1,7 +1,7 @@
 ---
 title: "Hệ Sinh Thái Doanh Nghiệp: Lợi Thế SME Bền Vững"
 slug: he-sinh-thai-doanh-nghiep
-date: 2026-06-08T13:38:00.000+07:00
+date: 2026-09-16T17:20:00.000+07:00
 featuredImage: /images/uploads/13.png
 excerpt: Hệ sinh thái doanh nghiệp không chỉ dành cho tập MNC. Khám phá
   framework Business Ecosystem để hiểu tại sao SME Việt cần tư duy hệ sinh thái
