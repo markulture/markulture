@@ -1,7 +1,7 @@
 ---
 title: "Chiến dịch Marketing Tết 2027: Lộ trình & Ý tưởng"
 slug: chien-dich-marketing-tet-2027
-date: 2026-10-27T17:37:00.000+07:00
+date: 2026-11-06T17:49:00.000+07:00
 featuredImage: /images/uploads/1.png
 excerpt: >+
   Hướng dẫn lên chiến dịch marketing Tết 2027 Đinh Mùi: mốc thời gian, 5 bước
